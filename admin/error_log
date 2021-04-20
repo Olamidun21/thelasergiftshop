@@ -1,0 +1,78 @@
+[26-Mar-2021 03:43:46 Africa/Lagos] PHP Warning:  mysqli::__construct(): (HY000/1044): Access denied for user 'oreswtux_afs12'@'localhost' to database 'giftshop' in /home/oreswtux/laser.365lifemedia.com/classes/Db_conn.php on line 13
+[26-Mar-2021 03:43:46 Africa/Lagos] PHP Warning:  mysqli::prepare(): Couldn't fetch mysqli in /home/oreswtux/laser.365lifemedia.com/classes/Crud.php on line 21
+[26-Mar-2021 03:43:46 Africa/Lagos] PHP Warning:  Crud::read(): Couldn't fetch mysqli in /home/oreswtux/laser.365lifemedia.com/classes/Crud.php on line 21
+[26-Mar-2021 03:43:49 Africa/Lagos] PHP Warning:  mysqli::__construct(): (HY000/1044): Access denied for user 'oreswtux_afs12'@'localhost' to database 'giftshop' in /home/oreswtux/laser.365lifemedia.com/classes/Db_conn.php on line 13
+[26-Mar-2021 03:43:49 Africa/Lagos] PHP Warning:  mysqli::prepare(): Couldn't fetch mysqli in /home/oreswtux/laser.365lifemedia.com/classes/Crud.php on line 21
+[26-Mar-2021 03:43:49 Africa/Lagos] PHP Warning:  Crud::read(): Couldn't fetch mysqli in /home/oreswtux/laser.365lifemedia.com/classes/Crud.php on line 21
+[26-Mar-2021 03:43:51 Africa/Lagos] PHP Warning:  mysqli::__construct(): (HY000/1044): Access denied for user 'oreswtux_afs12'@'localhost' to database 'giftshop' in /home/oreswtux/laser.365lifemedia.com/classes/Db_conn.php on line 13
+[26-Mar-2021 03:43:51 Africa/Lagos] PHP Warning:  mysqli::prepare(): Couldn't fetch mysqli in /home/oreswtux/laser.365lifemedia.com/classes/Crud.php on line 21
+[26-Mar-2021 03:43:51 Africa/Lagos] PHP Warning:  Crud::read(): Couldn't fetch mysqli in /home/oreswtux/laser.365lifemedia.com/classes/Crud.php on line 21
+[26-Mar-2021 03:43:51 Africa/Lagos] PHP Warning:  mysqli::__construct(): (HY000/1044): Access denied for user 'oreswtux_afs12'@'localhost' to database 'giftshop' in /home/oreswtux/laser.365lifemedia.com/classes/Db_conn.php on line 13
+[26-Mar-2021 03:43:51 Africa/Lagos] PHP Warning:  mysqli::prepare(): Couldn't fetch mysqli in /home/oreswtux/laser.365lifemedia.com/classes/Crud.php on line 21
+[26-Mar-2021 03:43:51 Africa/Lagos] PHP Warning:  Crud::read(): Couldn't fetch mysqli in /home/oreswtux/laser.365lifemedia.com/classes/Crud.php on line 21
+[26-Mar-2021 03:43:51 Africa/Lagos] PHP Warning:  mysqli::__construct(): (HY000/1044): Access denied for user 'oreswtux_afs12'@'localhost' to database 'giftshop' in /home/oreswtux/laser.365lifemedia.com/classes/Db_conn.php on line 13
+[26-Mar-2021 03:43:51 Africa/Lagos] PHP Warning:  mysqli::prepare(): Couldn't fetch mysqli in /home/oreswtux/laser.365lifemedia.com/classes/Crud.php on line 21
+[26-Mar-2021 03:43:51 Africa/Lagos] PHP Warning:  Crud::read(): Couldn't fetch mysqli in /home/oreswtux/laser.365lifemedia.com/classes/Crud.php on line 21
+[26-Mar-2021 03:43:51 Africa/Lagos] PHP Warning:  mysqli::__construct(): (HY000/1044): Access denied for user 'oreswtux_afs12'@'localhost' to database 'giftshop' in /home/oreswtux/laser.365lifemedia.com/classes/Db_conn.php on line 13
+[26-Mar-2021 03:43:51 Africa/Lagos] PHP Warning:  mysqli::prepare(): Couldn't fetch mysqli in /home/oreswtux/laser.365lifemedia.com/classes/Crud.php on line 21
+[26-Mar-2021 03:43:51 Africa/Lagos] PHP Warning:  Crud::read(): Couldn't fetch mysqli in /home/oreswtux/laser.365lifemedia.com/classes/Crud.php on line 21
+[26-Mar-2021 03:44:10 Africa/Lagos] PHP Warning:  mysqli::__construct(): (HY000/1044): Access denied for user 'oreswtux_afs12'@'localhost' to database 'giftshop' in /home/oreswtux/laser.365lifemedia.com/classes/Db_conn.php on line 13
+[26-Mar-2021 03:44:10 Africa/Lagos] PHP Warning:  mysqli::prepare(): Couldn't fetch mysqli in /home/oreswtux/laser.365lifemedia.com/classes/Crud.php on line 21
+[26-Mar-2021 03:44:10 Africa/Lagos] PHP Warning:  Crud::read(): Couldn't fetch mysqli in /home/oreswtux/laser.365lifemedia.com/classes/Crud.php on line 21
+[12-Apr-2021 10:49:02 America/New_York] PHP Warning:  require_once(c:/wamp64/www/giftshop/classes/Dashboard.php): failed to open stream: No such file or directory in /home/oreswtux/laser.365lifemedia.com/admin/product-list.php on line 4
+[12-Apr-2021 10:49:02 America/New_York] PHP Fatal error:  require_once(): Failed opening required 'c:/wamp64/www/giftshop/classes/Dashboard.php' (include_path='.:/opt/alt/php72/usr/share/pear') in /home/oreswtux/laser.365lifemedia.com/admin/product-list.php on line 4
+[12-Apr-2021 10:49:07 America/New_York] PHP Warning:  require_once(c:/wamp64/www/giftshop/classes/Dashboard.php): failed to open stream: No such file or directory in /home/oreswtux/laser.365lifemedia.com/admin/product-list.php on line 4
+[12-Apr-2021 10:49:07 America/New_York] PHP Fatal error:  require_once(): Failed opening required 'c:/wamp64/www/giftshop/classes/Dashboard.php' (include_path='.:/opt/alt/php72/usr/share/pear') in /home/oreswtux/laser.365lifemedia.com/admin/product-list.php on line 4
+[12-Apr-2021 11:10:43 America/New_York] PHP Warning:  require_once(c:/wamp64/www/giftshop/classes/Dashboard.php): failed to open stream: No such file or directory in /home/oreswtux/laser.365lifemedia.com/admin/product-list.php on line 4
+[12-Apr-2021 11:10:43 America/New_York] PHP Fatal error:  require_once(): Failed opening required 'c:/wamp64/www/giftshop/classes/Dashboard.php' (include_path='.:/opt/alt/php72/usr/share/pear') in /home/oreswtux/laser.365lifemedia.com/admin/product-list.php on line 4
+[12-Apr-2021 11:13:09 America/New_York] PHP Warning:  require_once(c:/wamp64/www/giftshop/classes/Dashboard.php): failed to open stream: No such file or directory in /home/oreswtux/laser.365lifemedia.com/admin/product-list.php on line 4
+[12-Apr-2021 11:13:09 America/New_York] PHP Fatal error:  require_once(): Failed opening required 'c:/wamp64/www/giftshop/classes/Dashboard.php' (include_path='.:/opt/alt/php72/usr/share/pear') in /home/oreswtux/laser.365lifemedia.com/admin/product-list.php on line 4
+[12-Apr-2021 11:16:35 America/New_York] PHP Warning:  require_once(classes/Dashboard.php): failed to open stream: No such file or directory in /home/oreswtux/laser.365lifemedia.com/admin/product-list.php on line 4
+[12-Apr-2021 11:16:35 America/New_York] PHP Fatal error:  require_once(): Failed opening required 'classes/Dashboard.php' (include_path='.:/opt/alt/php72/usr/share/pear') in /home/oreswtux/laser.365lifemedia.com/admin/product-list.php on line 4
+[12-Apr-2021 11:17:36 America/New_York] PHP Fatal error:  Uncaught Error: Call to a member function fetch_assoc() on boolean in /home/oreswtux/laser.365lifemedia.com/classes/Dashboard.php:956
+Stack trace:
+#0 /home/oreswtux/laser.365lifemedia.com/admin/product-list.php(6): Dashboard->getProductlist()
+#1 {main}
+  thrown in /home/oreswtux/laser.365lifemedia.com/classes/Dashboard.php on line 956
+[12-Apr-2021 11:17:47 America/New_York] PHP Fatal error:  Uncaught Error: Call to a member function fetch_assoc() on boolean in /home/oreswtux/laser.365lifemedia.com/classes/Dashboard.php:956
+Stack trace:
+#0 /home/oreswtux/laser.365lifemedia.com/admin/product-list.php(6): Dashboard->getProductlist()
+#1 {main}
+  thrown in /home/oreswtux/laser.365lifemedia.com/classes/Dashboard.php on line 956
+[12-Apr-2021 11:19:02 America/New_York] PHP Fatal error:  Uncaught Error: Call to a member function fetch_assoc() on boolean in /home/oreswtux/laser.365lifemedia.com/classes/Dashboard.php:956
+Stack trace:
+#0 /home/oreswtux/laser.365lifemedia.com/admin/product-list.php(6): Dashboard->getProductlist()
+#1 {main}
+  thrown in /home/oreswtux/laser.365lifemedia.com/classes/Dashboard.php on line 956
+[12-Apr-2021 11:25:33 America/New_York] PHP Fatal error:  Uncaught Error: Call to a member function fetch_assoc() on boolean in /home/oreswtux/laser.365lifemedia.com/classes/Dashboard.php:956
+Stack trace:
+#0 /home/oreswtux/laser.365lifemedia.com/admin/product-list.php(8): Dashboard->getProductlist()
+#1 {main}
+  thrown in /home/oreswtux/laser.365lifemedia.com/classes/Dashboard.php on line 956
+[12-Apr-2021 11:26:07 America/New_York] PHP Fatal error:  Uncaught Error: Call to a member function fetch_assoc() on boolean in /home/oreswtux/laser.365lifemedia.com/classes/Dashboard.php:956
+Stack trace:
+#0 /home/oreswtux/laser.365lifemedia.com/admin/product-list.php(8): Dashboard->getProductlist()
+#1 {main}
+  thrown in /home/oreswtux/laser.365lifemedia.com/classes/Dashboard.php on line 956
+[12-Apr-2021 11:29:40 America/New_York] PHP Fatal error:  Uncaught Error: Call to a member function fetch_assoc() on boolean in /home/oreswtux/laser.365lifemedia.com/classes/Dashboard.php:956
+Stack trace:
+#0 /home/oreswtux/laser.365lifemedia.com/admin/product-list.php(8): Dashboard->getProductlist()
+#1 {main}
+  thrown in /home/oreswtux/laser.365lifemedia.com/classes/Dashboard.php on line 956
+[12-Apr-2021 11:32:42 America/New_York] PHP Fatal error:  Uncaught Error: Call to a member function fetch_assoc() on boolean in /home/oreswtux/laser.365lifemedia.com/classes/Dashboard.php:956
+Stack trace:
+#0 /home/oreswtux/laser.365lifemedia.com/admin/product-list.php(8): Dashboard->getProductlist()
+#1 {main}
+  thrown in /home/oreswtux/laser.365lifemedia.com/classes/Dashboard.php on line 956
+[12-Apr-2021 11:37:54 America/New_York] PHP Fatal error:  Uncaught Error: Call to a member function fetch_assoc() on boolean in /home/oreswtux/laser.365lifemedia.com/classes/Dashboard.php:956
+Stack trace:
+#0 /home/oreswtux/laser.365lifemedia.com/admin/product-list.php(8): Dashboard->getProductlist()
+#1 {main}
+  thrown in /home/oreswtux/laser.365lifemedia.com/classes/Dashboard.php on line 956
+[12-Apr-2021 11:39:48 America/New_York] PHP Notice:  Undefined variable: ip in /home/oreswtux/laser.365lifemedia.com/admin/product-list.php on line 134
+[12-Apr-2021 11:41:11 America/New_York] PHP Notice:  Undefined variable: ip in /home/oreswtux/laser.365lifemedia.com/admin/product-list.php on line 140
+[12-Apr-2021 12:24:40 America/New_York] PHP Notice:  Undefined variable: ip in /home/oreswtux/laser.365lifemedia.com/admin/product-list.php on line 140
+[12-Apr-2021 12:51:06 America/New_York] PHP Notice:  Undefined index: request in /home/oreswtux/laser.365lifemedia.com/admin/admin.php on line 7
+[12-Apr-2021 12:55:54 America/New_York] PHP Notice:  Undefined index: request in /home/oreswtux/laser.365lifemedia.com/admin/admin.php on line 7
+[13-Apr-2021 07:23:37 America/New_York] PHP Notice:  Undefined variable: pholes in /home/oreswtux/laser.365lifemedia.com/classes/Dashboard.php on line 287
+[13-Apr-2021 07:23:37 America/New_York] PHP Warning:  Invalid argument supplied for foreach() in /home/oreswtux/laser.365lifemedia.com/classes/Dashboard.php on line 287
