@@ -61,10 +61,29 @@ $ip = $_SERVER['REMOTE_ADDR'];
 } */
 body {
     font-family: sofia, san-serif !important;
+    background-color:white !important;
 }
     /* } */
 a {
     color: #ff6000;
+}
+.saerchInput{
+    border-bottom-left-radius:40px;
+    border-top-left-radius:40px;
+    outline:none;
+
+}
+.saerchCategory{
+    border-bottom-right-radius:40px;
+    border-top-right-radius:40px;
+
+
+}
+.navCont{
+    background-color:white;
+}
+.navList{
+    color:black;
 }
 </style>
 
@@ -147,6 +166,26 @@ a {
                                             </li>
                                             <!--HOME-->
                                             <li>
+                                              <form class="big-deal-form mt-3 mr-3" >
+                                               <div class="input-group ">
+                                                <!-- <div class="input-group-prepend">
+                                                    <span class="search"><i class="fa fa-search"></i></span>
+                                                </div> -->
+                                                  <input type="text" class="form-control saerchInput" placeholder="Search a Product">
+                                                  <div class="input-group-prepend">
+                                                    <select class="saerchCategory">
+                                                        <option value="*">All Category</option>
+                                                        <?php
+                                                            foreach($categories as $c){
+                                                        ?>
+                                                        <option value="<?php echo $c['cat_id'] ?>"><?php echo $c['name'] ?></option>
+                                                        <?php } ?>
+                                                    </select>
+                                                 </div>
+                                                </div>
+                                              </form>
+                                            </li>
+                                        <li>
                                                 <a href="/">Home</a>
                                                
                                             </li>
@@ -206,21 +245,33 @@ a {
                 </div>
             </div>
         </div>
-        <div class="category-header category-header-inverse">
+        <div class="p-4  navCont" >
             <div class="custom-container">
                 <div class="row">
                     <div class="col">
                         <div class="navbar-menu">
                             <div class="category-left">
                                 <div class=" nav-block">
-                                    <div class="nav-left">
-                                        <nav class="navbar" data-toggle="collapse" data-target="#navbarToggleExternalContent">
-                                            <button class="navbar-toggler" type="button">
+                                    <div class="">
+                                        <nav class="row d-flex justify-content-between">
+                                        
+                                        <?php
+                                                foreach($categories as $c){
+                                            ?>
+                                            <ul>
+                                            <!-- data-toggle="collapse" data-target="#navbarToggleExternalContent" -->
+                                            <li>  <a  class="navList" href="category?id=<?php  echo $c['cat_id'] ?>"><?php echo $c["name"]; ?></a></li>
+                                            </ul>
+                                               <?php
+                                                }
+                                            ?>
+                                            <!-- <button class="navbar-toggler" type="button">
                                                 <span class="navbar-icon"><i class="fa fa-arrow-down"></i></span>
                                             </button>
-                                            <h5 class="mb-0 ml-3 text-white title-font">Shop by category</h5>
+                                            <h5 class="mb-0 ml-3 text-white title-font">Shop by category</h5> -->
                                         </nav>
-                                        <div class="collapse  nav-desk" id="navbarToggleExternalContent">
+                                        
+                                        <!-- <div class="collapse  nav-desk" id="navbarToggleExternalContent">
                                             <ul class="nav-cat title-font m-0" id="cat">
                                             <?php
                                                 foreach($categories as $c){
@@ -231,31 +282,10 @@ a {
                                                 }
                                             ?>
                                             </ul>
-                                        </div>
+                                        </div> -->
                                     </div>
                                 </div>
-                                <div class="input-block">
-                                    <div class="input-box">
-                                        <form class="big-deal-form">
-                                            <div class="input-group ">
-                                                <div class="input-group-prepend">
-                                                    <span class="search"><i class="fa fa-search"></i></span>
-                                                </div>
-                                                <input type="text" class="form-control" placeholder="Search a Product" >
-                                                <div class="input-group-prepend">
-                                                    <select>
-                                                        <option value="*">All Category</option>
-                                                        <?php
-                                                            foreach($categories as $c){
-                                                        ?>
-                                                        <option value="<?php echo $c['cat_id'] ?>"><?php echo $c['name'] ?></option>
-                                                        <?php } ?>
-                                                    </select>
-                                                </div>
-                                            </div>
-                                        </form>
-                                    </div>
-                                </div>
+                                
                             </div>
                             <div class="category-right">
                                 <!-- <div class="contact-block mr-2">
@@ -330,7 +360,7 @@ a {
         </div>
     </header>
     <!-- Add to cart bar -->
-<div id="cart_side" class=" add_to_cart right">
+<div id="cart_side" class="add_to_cart">
     <a href="javascript:void(0)" class="overlay" onclick="closeCart()"></a>
     <div class="cart-inner">
         <div class="cart_top">
@@ -491,6 +521,7 @@ a {
                 })
 
             })
+            
     function addTocart(){
         customtext = $('#custom').val();
         font = $('#font').val();
