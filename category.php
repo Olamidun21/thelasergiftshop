@@ -60,9 +60,15 @@ if(!isset($_SESSION)){
 .media-body {
     font-family: mishaland, san-serif !important;
 }
+body{
+     background-color:white !important;
+}
+.cardBorder{
+   border-radius:10px
+}
     </style>
 </head>
-<body class="bg-light">
+<body >
 
 <!-- loader start -->
 <div class="loader-wrapper">
@@ -99,7 +105,7 @@ if(!isset($_SESSION)){
 
 
 <!-- section start -->
-<section class="section-big-pt-space ratio_asos bg-light">
+<section class="section-big-pt-space ratio_asos">
     <div class="collection-wrapper">
         <div class="custom-container">
             <div class="row">
@@ -134,22 +140,22 @@ if(!isset($_SESSION)){
                     <!-- silde-bar colleps block end here -->
                  
                 </div>
-                <div class="collection-content col">
+                <div class="collection-content col ">
                     <div class="page-main-content">
                         <div class="row">
                             <div class="col-sm-12">
-                                <div class="top-banner-wrapper">
+                                <div class="top-banner-wrapper ">
                                     <!-- <a href="#"><img src="assets/images/category/<?php echo $category[0]['image']; ?>" class="img-fluid " alt=""></a> -->
                                     <div class="top-banner-content small-section">
                                         <p><?php echo $category[0]["name"]; ?></p>
                                       </div>
                                 </div>
-                                <div class="collection-product-wrapper">
+                                <div class="collection-product-wrapper mb-3">
                                   
-                                    <div class="product-wrapper-grid">
+                                    <div class="product-wrapper-grid ">
                                         <div class="row" id="product">
                                            <?php foreach($catproduct as $p){ ?>
-                                            <div class="col-xl-3 col-md-4 col-6  col-grid-box">
+                                            <div class="col-xl-3 col-md-4 col-6  col-grid-box shadow-sm  cardBorder">
                                             
                                             <a href="product?id=<?php echo $p['name'] ?>">
                                                 <div class="product">
