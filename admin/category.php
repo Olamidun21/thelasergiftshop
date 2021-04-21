@@ -122,9 +122,9 @@ if(isset($_SESSION['admin_id'])){
                                         </div>
                                     </div>
                                 </div>
-                                <div class="table-responsive">
+                                <!-- <div class="table-responsive">
                                     <div id="basicScenario" class="product-physical"></div>
-                                </div>
+                                </div> -->
                             </div>
                         </div>
                     </div>

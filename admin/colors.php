@@ -67,7 +67,7 @@ if(!isset($_SESSION)){
                     <div class="row">
                         <div class="col-lg-6">
                             <div class="page-header-left">
-                                <h3>Category
+                                <h3>Color
                                     <small>The Laser Gift Shop Admin panel</small>
                                 </h3>
                             </div>
