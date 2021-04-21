@@ -45,8 +45,30 @@ if(!isset($_SESSION)){
 
     <!-- Theme css -->
     <link rel="stylesheet" type="text/css" href="assets/css/color1.css" media="screen" id="color">
+    <style>
+    .bacgr{
+        background-color:white !important;
+    }
+    .textColo{
+        color:black !important;
+    }
+    .cardList p{
+        color:black
+    }
+    .cardList{
+        background-color:white !important;
+        border-radius:10px;
+    }
+    body{
+        background-color:white !important;
+    }
+    .sliderses{
+        background-color:lightgrey !important;
+
+    }
+    </style>
   </head>
-  <body class="bg-light">
+  <body>
 
     <!-- loader start -->
     <div class="loader-wrapper">
@@ -61,14 +83,14 @@ if(!isset($_SESSION)){
     <!--header end-->
 
     <!--slider start-->
-    <section class="theme-slider section-pt-space">
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-12 p-0">
-                    <div class="slide-1 no-arrow">
-                        <div>
+    <section class="theme-slider section-pt-space ">
+        <div class="container-fluid ">
+            <div class="row ">
+                <div class="col-12 p-0 ">
+                    <div class="slide-1 no-arrow ">
+                        <div> 
                             <div class="slider-banner slide-banner-4">
-                                <div class="slider-img">
+                                <div class="slider-img ">
                                     <ul class="layout5-slide-1">
                                         <li id="img-1"><img src="assets/images/layout-5/slider/1.1.png" class="img-fluid" alt="slider"></li>
                                     </ul>
@@ -131,14 +153,14 @@ if(!isset($_SESSION)){
     <!--slider end-->
 
     <!--services start-->
-    <section class="services services-inverse">
+    <section class="services services-inverse bacgr" >
         <div class="container">
             <div class="row service-block">
                 <div class="col-lg-4 col-md-6  col-sm-12">
                     <div class="media">
-                        <svg height="679pt" viewBox="0 -117 679.99892 679" width="679pt" xmlns="http://www.w3.org/2000/svg"><path d="m12.347656 378.382812h37.390625c4.371094 37.714844 36.316407 66.164063 74.277344 66.164063 37.96875 0 69.90625-28.449219 74.28125-66.164063h241.789063c4.382812 37.714844 36.316406 66.164063 74.277343 66.164063 37.96875 0 69.902344-28.449219 74.285157-66.164063h78.890624c6.882813 0 12.460938-5.578124 12.460938-12.460937v-352.957031c0-6.882813-5.578125-12.464844-12.460938-12.464844h-432.476562c-6.875 0-12.457031 5.582031-12.457031 12.464844v69.914062h-105.570313c-4.074218.011719-7.890625 2.007813-10.21875 5.363282l-68.171875 97.582031-26.667969 37.390625-9.722656 13.835937c-1.457031 2.082031-2.2421872 4.558594-2.24999975 7.101563v121.398437c-.09765625 3.34375 1.15624975 6.589844 3.47656275 9.003907 2.320312 2.417968 5.519531 3.796874 8.867187 3.828124zm111.417969 37.386719c-27.527344 0-49.851563-22.320312-49.851563-49.847656 0-27.535156 22.324219-49.855469 49.851563-49.855469 27.535156 0 49.855469 22.320313 49.855469 49.855469 0 27.632813-22.21875 50.132813-49.855469 50.472656zm390.347656 0c-27.53125 0-49.855469-22.320312-49.855469-49.847656 0-27.535156 22.324219-49.855469 49.855469-49.855469 27.539063 0 49.855469 22.320313 49.855469 49.855469.003906 27.632813-22.21875 50.132813-49.855469 50.472656zm140.710938-390.34375v223.34375h-338.375c-6.882813 0-12.464844 5.578125-12.464844 12.460938 0 6.882812 5.582031 12.464843 12.464844 12.464843h338.375v79.761719h-66.421875c-4.382813-37.710937-36.320313-66.15625-74.289063-66.15625-37.960937 0-69.898437 28.445313-74.277343 66.15625h-192.308594v-271.324219h89.980468c6.882813 0 12.464844-5.582031 12.464844-12.464843 0-6.882813-5.582031-12.464844-12.464844-12.464844h-89.980468v-31.777344zm-531.304688 82.382813h99.703125v245.648437h-24.925781c-4.375-37.710937-36.3125-66.15625-74.28125-66.15625-37.960937 0-69.90625 28.445313-74.277344 66.15625h-24.929687v-105.316406l3.738281-5.359375h152.054687c6.882813 0 12.460938-5.574219 12.460938-12.457031v-92.226563c0-6.882812-5.578125-12.464844-12.460938-12.464844h-69.796874zm-30.160156 43h74.777344v67.296875h-122.265625zm0 0"/></svg>
-                        <div class="media-body">
-                            <h5>free shipping</h5>
+                        <svg height="679pt" viewBox="0 -117 679.99892 679" width="679pt" xmlns="http://www.w3.org/2000/svg"><path fill="black" d="m12.347656 378.382812h37.390625c4.371094 37.714844 36.316407 66.164063 74.277344 66.164063 37.96875 0 69.90625-28.449219 74.28125-66.164063h241.789063c4.382812 37.714844 36.316406 66.164063 74.277343 66.164063 37.96875 0 69.902344-28.449219 74.285157-66.164063h78.890624c6.882813 0 12.460938-5.578124 12.460938-12.460937v-352.957031c0-6.882813-5.578125-12.464844-12.460938-12.464844h-432.476562c-6.875 0-12.457031 5.582031-12.457031 12.464844v69.914062h-105.570313c-4.074218.011719-7.890625 2.007813-10.21875 5.363282l-68.171875 97.582031-26.667969 37.390625-9.722656 13.835937c-1.457031 2.082031-2.2421872 4.558594-2.24999975 7.101563v121.398437c-.09765625 3.34375 1.15624975 6.589844 3.47656275 9.003907 2.320312 2.417968 5.519531 3.796874 8.867187 3.828124zm111.417969 37.386719c-27.527344 0-49.851563-22.320312-49.851563-49.847656 0-27.535156 22.324219-49.855469 49.851563-49.855469 27.535156 0 49.855469 22.320313 49.855469 49.855469 0 27.632813-22.21875 50.132813-49.855469 50.472656zm390.347656 0c-27.53125 0-49.855469-22.320312-49.855469-49.847656 0-27.535156 22.324219-49.855469 49.855469-49.855469 27.539063 0 49.855469 22.320313 49.855469 49.855469.003906 27.632813-22.21875 50.132813-49.855469 50.472656zm140.710938-390.34375v223.34375h-338.375c-6.882813 0-12.464844 5.578125-12.464844 12.460938 0 6.882812 5.582031 12.464843 12.464844 12.464843h338.375v79.761719h-66.421875c-4.382813-37.710937-36.320313-66.15625-74.289063-66.15625-37.960937 0-69.898437 28.445313-74.277343 66.15625h-192.308594v-271.324219h89.980468c6.882813 0 12.464844-5.582031 12.464844-12.464843 0-6.882813-5.582031-12.464844-12.464844-12.464844h-89.980468v-31.777344zm-531.304688 82.382813h99.703125v245.648437h-24.925781c-4.375-37.710937-36.3125-66.15625-74.28125-66.15625-37.960937 0-69.90625 28.445313-74.277344 66.15625h-24.929687v-105.316406l3.738281-5.359375h152.054687c6.882813 0 12.460938-5.574219 12.460938-12.457031v-92.226563c0-6.882812-5.578125-12.464844-12.460938-12.464844h-69.796874zm-30.160156 43h74.777344v67.296875h-122.265625zm0 0"/></svg>
+                        <div class="media-body ">
+                            <h5 class="textColo">free shipping</h5>
                         </div>
                     </div>
                 </div>
@@ -148,7 +170,7 @@ if(!isset($_SESSION)){
     	 viewBox="0 0 417.12 417.12" style="enable-background:new 0 0 417.12 417.12;" xml:space="preserve">
     <g>
     	<g>
-    		<path d="M409.12,200.741c-4.418,0-8,3.582-8,8c-0.06,106.525-86.464,192.831-192.988,192.772
+    		<path fill="black" d="M409.12,200.741c-4.418,0-8,3.582-8,8c-0.06,106.525-86.464,192.831-192.988,192.772
     			C101.607,401.453,15.3,315.049,15.36,208.524C15.42,102,101.824,15.693,208.348,15.753c51.36,0.029,100.587,20.54,136.772,56.988
     			l-17.84-0.72c-4.418,0-8,3.582-8,8s3.582,8,8,8l36.72,1.52c1.013,0.003,2.018-0.188,2.96-0.56l0.88-0.56
     			c1.381-0.859,2.534-2.039,3.36-3.44c0.034-0.426,0.034-0.854,0-1.28c0.183-0.492,0.317-1.001,0.4-1.52l3.2-36.72
@@ -159,7 +181,7 @@ if(!isset($_SESSION)){
     </g>
     <g>
     	<g>
-    		<path d="M200.4,256.341c-3.716-2.516-8.162-3.726-12.64-3.44h-56c1.564-2.442,3.302-4.768,5.2-6.96
+    		<path fill="black" d="M200.4,256.341c-3.716-2.516-8.162-3.726-12.64-3.44h-56c1.564-2.442,3.302-4.768,5.2-6.96
     			c6.727-7.402,14.088-14.201,22-20.32c10.667-8.747,18.293-15.147,22.88-19.2c5.252-4.976,9.752-10.689,13.36-16.96
     			c4.377-7.234,6.649-15.545,6.56-24c-0.009-11.177-4.27-21.931-11.92-30.08c-3.725-3.941-8.181-7.12-13.12-9.36
     			c-8.709-3.645-18.08-5.443-27.52-5.28c-8.048-0.163-16.055,1.194-23.6,4c-6.2,2.328-11.862,5.894-16.64,10.48
@@ -175,7 +197,7 @@ if(!isset($_SESSION)){
     </g>
     <g>
     	<g>
-    		<path d="M333.76,222.901c-4.254-1.637-8.809-2.346-13.36-2.08h-4.56v-82.48c0-12.373-5.333-18.56-16-18.56
+    		<path fill="black" d="M333.76,222.901c-4.254-1.637-8.809-2.346-13.36-2.08h-4.56v-82.48c0-12.373-5.333-18.56-16-18.56
     			c-3.185-0.052-6.261,1.155-8.56,3.36c-3.331,3.343-6.382,6.956-9.12,10.8l-56.48,75.6l-3.92,5.2c-1.067,1.44-2.107,2.907-3.12,4.4
     			c-0.916,1.374-1.668,2.851-2.24,4.4c-0.475,1.308-0.718,2.689-0.72,4.08c-0.237,4.699,1.607,9.263,5.04,12.48
     			c4.323,3.358,9.742,4.984,15.2,4.56h53.52v20.08c-0.273,4.252,1.006,8.459,3.6,11.84c5.276,5.346,13.887,5.403,19.233,0.127
@@ -186,7 +208,7 @@ if(!isset($_SESSION)){
     </g>
     </svg>
                         <div class="media-body">
-                            <h5>24X7 SERVICE</h5>
+                            <h5 class="textColo">24X7 SERVICE</h5>
                         </div>
                     </div>
                 </div>
@@ -208,12 +230,12 @@ if(!isset($_SESSION)){
                 </div> -->
                 <div class="col-lg-4 col-md-6  col-sm-12 ">
                     <div class="media">
-                        <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                        <svg version="1.1"  id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
     	                    viewBox="0 0 448 448" style="enable-background:new 0 0 448 448;" xml:space="preserve">
         <g>
             <g>
                 <g>
-                    <path d="M384,172.4C384,83.6,312.4,12,224,12S64,83.6,64,172c0,0,0,0,0,0.4C28.4,174.4,0,204,0,240v8c0,37.6,30.4,68,68,68h3.6
+                    <path fill="black" d="M384,172.4C384,83.6,312.4,12,224,12S64,83.6,64,172c0,0,0,0,0,0.4C28.4,174.4,0,204,0,240v8c0,37.6,30.4,68,68,68h3.6
                         l28.4,45.2c20,32,54,50.8,91.6,50.8h5.6c3.6,13.6,16,24,30.8,24c17.6,0,32-14.4,32-32c0-17.6-14.4-32-32-32
                         c-14.8,0-27.2,10.4-30.8,24h-5.6c-32,0-61.2-16.4-78-43.6L90.4,316H96c8.8,0,16-7.2,16-16V188c0-8.8-7.2-16-16-16H80
                         c0-79.6,64.4-144,144-144s144,64.4,144,144h-16c-8.8,0-16,7.2-16,16v112c0,8.8,7.2,16,16,16h28c37.6,0,68-30.4,68-68v-8
@@ -228,7 +250,7 @@ if(!isset($_SESSION)){
         </g>
     </svg>
                         <div class="media-body">
-                            <h5>ONLINE PAYMENT</h5>
+                            <h5 class="textColo">ONLINE PAYMENT</h5>
                         </div>
                     </div>
                 </div>
@@ -251,11 +273,11 @@ if(!isset($_SESSION)){
                             <!-- <li class=""><a href="tab-10">On Sale</a></li> -->
                         </ul>
                         <div class="tab-content-cls">
-                            <div id="tab-7" class="tab-content active default ">
+                            <div id="tab-7" class="tab-content active default">
                             
                                     <div class="slide-5 product-m no-arrow">
                                         <div>
-                                            <div class="media-banner media-banner-1 border-0">
+                                            <div class="media-banner media-banner-1 border-0 cardList shadow-sm mt-4 mb-4">
                                                         <div class="media-banner-box">
                                                             <div class="media">
                                                                 <img style = "width:100px; height:100px;" src="assets/images/products/<?php echo $product[0]['image']; ?>" class="img-fluid " alt="banner">
@@ -299,7 +321,8 @@ if(!isset($_SESSION)){
                                                                     </div>
                                                                 </div>
                                                             </div>
-                                                        </div><div class="media-banner-box">
+                                                        </div>
+                                                        <div class="media-banner-box">
                                                             <div class="media">
                                                                 <img style = "width:100px; height:100px;" src="assets/images/products/<?php echo $product[2]['image']; ?>" class="img-fluid " alt="banner">
                                                                 <div class="media-body">
@@ -324,7 +347,7 @@ if(!isset($_SESSION)){
                                             </div>
                                         </div>
                                         <div>
-                                            <div class="media-banner media-banner-1 border-0">
+                                            <div class="media-banner media-banner-1 border-0 cardList shadow-sm mt-4 mb-4">
                                             <div class="media-banner-box">
                                                         <div class="media">
                                                             <img style = "width:100px; height:100px;" src="assets/images/products/<?php echo $product[3]['image']; ?>" class="img-fluid " alt="banner">
@@ -392,7 +415,7 @@ if(!isset($_SESSION)){
                                             </div>
                                         </div>
                                         <div>
-                                            <div class="media-banner media-banner-1 border-0">
+                                            <div class="media-banner media-banner-1 border-0 cardList shadow-sm mt-4 mb-4">
                                             <div class="media-banner-box">
                                                         <div class="media">
                                                             <img style = "width:100px; height:100px;" src="assets/images/products/<?php echo $product[6]['image']; ?>" class="img-fluid " alt="banner">
@@ -414,7 +437,8 @@ if(!isset($_SESSION)){
                                                                 </div>
                                                             </div>
                                                         </div>
-                                                    </div><div class="media-banner-box">
+                                                    </div>
+                                                    <div class="media-banner-box">
                                                         <div class="media">
                                                             <img style = "width:100px; height:100px;" src="assets/images/products/<?php echo $product[7]['image']; ?>" class="img-fluid " alt="banner">
                                                             <div class="media-body">
@@ -435,7 +459,8 @@ if(!isset($_SESSION)){
                                                                 </div>
                                                             </div>
                                                         </div>
-                                                    </div><div class="media-banner-box">
+                                                    </div>
+                                                    <div class="media-banner-box">
                                                         <div class="media">
                                                             <img style = "width:100px; height:100px;" src="assets/images/products/<?php echo $product[8]['image']; ?>" class="img-fluid " alt="banner">
                                                             <div class="media-body">
@@ -460,7 +485,7 @@ if(!isset($_SESSION)){
                                             </div>
                                         </div>
                                         <div>
-                                        <div class="media-banner media-banner-1 border-0">
+                                        <div class="media-banner media-banner-1 border-0 cardList shadow-sm mt-4 mb-4">
                                         <div class="media-banner-box">
                                                         <div class="media">
                                                             <img style = "width:100px; height:100px;" src="assets/images/products/<?php echo $product[9]['image']; ?>" class="img-fluid " alt="banner">
@@ -528,7 +553,7 @@ if(!isset($_SESSION)){
                                         </div>
                                      </div>
                                         <div>
-                                            <div class="media-banner media-banner-1 border-0">
+                                            <div class="media-banner media-banner-1 border-0 cardList shadow-sm mt-4 mb-4">
                                             <div class="media-banner-box">
                                                         <div class="media">
                                                             <img style = "width:100px; height:100px;" src="assets/images/products/<?php echo $product[12]['image']; ?>" class="img-fluid " alt="banner">
@@ -602,7 +627,7 @@ if(!isset($_SESSION)){
                                 
                                     <div class="slide-5 product-m no-arrow">
                                         <div>
-                                            <div class="media-banner media-banner-1 border-0">
+                                            <div class="media-banner media-banner-1 border-0 cardList shadow-sm mt-4 mb-4">
                                             <div class="media-banner-box">
                                                             <div class="media">
                                                                 <img style = "width:100px; height:100px;" src="assets/images/products/<?php echo $featured[0]['image']; ?>" class="img-fluid " alt="banner">
@@ -670,7 +695,7 @@ if(!isset($_SESSION)){
                                             </div>
                                         </div>
                                         <div>
-                                            <div class="media-banner media-banner-1 border-0">
+                                            <div class="media-banner media-banner-1 border-0 cardList shadow-sm mt-4 mb-4">
                                             <div class="media-banner-box">
                                                         <div class="media">
                                                             <img style = "width:100px; height:100px;" src="assets/images/products/<?php echo $featured[3]['image']; ?>" class="img-fluid " alt="banner">
@@ -738,7 +763,7 @@ if(!isset($_SESSION)){
                                             </div>
                                         </div>
                                         <div>
-                                            <div class="media-banner media-banner-1 border-0">
+                                            <div class="media-banner media-banner-1 border-0 cardList shadow-sm mt-4 mb-4">
                                             <div class="media-banner-box">
                                                         <div class="media">
                                                             <img style = "width:100px; height:100px;" src="assets/images/products/<?php echo $featured[6]['image']; ?>" class="img-fluid " alt="banner">
@@ -806,7 +831,7 @@ if(!isset($_SESSION)){
                                             </div>
                                         </div>
                                         <div>
-                                        <div class="media-banner media-banner-1 border-0">
+                                        <div class="media-banner media-banner-1 border-0 cardList shadow-sm mt-4 mb-4">
                                         <div class="media-banner-box">
                                                         <div class="media">
                                                             <img style = "width:100px; height:100px;" src="assets/images/products/<?php echo $featured[9]['image']; ?>" class="img-fluid " alt="banner">
@@ -874,7 +899,7 @@ if(!isset($_SESSION)){
                                         </div>
                                      </div>
                                         <div>
-                                            <div class="media-banner media-banner-1 border-0">
+                                            <div class="media-banner media-banner-1 border-0 cardList shadow-sm mt-4 mt-4">
                                             <div class="media-banner-box">
                                                         <div class="media">
                                                             <img style = "width:100px; height:100px;" src="assets/images/products/<?php echo $featured[12]['image']; ?>" class="img-fluid " alt="banner">
@@ -952,7 +977,7 @@ if(!isset($_SESSION)){
                             <?php if($b > 0){ ?>
                                 <div class="slide-5 product-m no-arrow">
                                             <div>
-                                                <div class="media-banner media-banner-1 border-0">
+                                                <div class="media-banner media-banner-1 border-0 cardList shadow-sm mt-4 mb-4">
                                                 <div class="media-banner-box">
                                                                 <div class="media">
                                                                     <img style = "width:100px; height:100px;" src="assets/images/products/<?php echo $bestselling[0]['image']; ?>" class="img-fluid " alt="banner">
@@ -1020,7 +1045,7 @@ if(!isset($_SESSION)){
                                                 </div>
                                             </div>
                                             <div>
-                                                <div class="media-banner media-banner-1 border-0">
+                                                <div class="media-banner media-banner-1 border-0 cardList shadow-sm mt-4 mb-4">
                                                 <div class="media-banner-box">
                                                             <div class="media">
                                                                 <img style = "width:100px; height:100px;" src="assets/images/products/<?php echo $bestselling[3]['image']; ?>" class="img-fluid " alt="banner">
@@ -1088,7 +1113,7 @@ if(!isset($_SESSION)){
                                                 </div>
                                             </div>
                                             <div>
-                                                <div class="media-banner media-banner-1 border-0">
+                                                <div class="media-banner media-banner-1 border-0 cardList shadow-sm mt-4 mb-4">
                                                 <div class="media-banner-box">
                                                             <div class="media">
                                                                 <img style = "width:100px; height:100px;" src="assets/images/products/<?php echo $bestselling[6]['image']; ?>" class="img-fluid " alt="banner">
@@ -1156,7 +1181,7 @@ if(!isset($_SESSION)){
                                                 </div>
                                             </div>
                                             <div>
-                                            <div class="media-banner media-banner-1 border-0">
+                                            <div class="media-banner media-banner-1 border-0 cardList shadow-sm mt-4 mb-4">
                                             <div class="media-banner-box">
                                                             <div class="media">
                                                                 <img style = "width:100px; height:100px;" src="assets/images/products/<?php echo $bestselling[9]['image']; ?>" class="img-fluid " alt="banner">
@@ -1224,7 +1249,7 @@ if(!isset($_SESSION)){
                                             </div>
                                         </div>
                                             <div>
-                                                <div class="media-banner media-banner-1 border-0">
+                                                <div class="media-banner media-banner-1 border-0 cardList shadow-sm mt-4 mb-4">
                                                 <div class="media-banner-box">
                                                             <div class="media">
                                                                 <img style = "width:100px; height:100px;" src="assets/images/products/<?php echo $bestselling[12]['image']; ?>" class="img-fluid " alt="banner">
@@ -1304,7 +1329,7 @@ if(!isset($_SESSION)){
 
 
     <!--rounded category start-->
-    <section class="rounded-category rounded-category-inverse" id="categor">
+    <section class="rounded-category rounded-category-inverse rounded-category sliderses" id="categor">
         <div class="container" >
             <div class="row">
                 <div class="col">
@@ -1316,7 +1341,7 @@ if(!isset($_SESSION)){
                             <div class="category-contain">
                                <a href="#">
                                    <div class="img-wrapper">
-                                       <img src="../assets/images/category/<?php echo $c["image"] ?>" alt="category" class="img-fluid  ">
+                                       <img src="../assets/images/category/<?php echo $c["image"] ?>" alt="category" class="img-fluid  bordered">
                                    </div>
                                    <div>
                                        <a href="category?id=<?php echo $c["cat_id"]; ?>">
@@ -1344,14 +1369,14 @@ if(!isset($_SESSION)){
     <!--tab product-->
 
     <!-- slider tab  -->
-    <section class="section-py-space ratio_square product">
+    <section class="section-py-space ratio_square product ">
        
     </section>
     <!-- slider tab end -->
 
  
        <!--testimonial start-->
-       <section class="testimonial testimonial-inverse section-mb-space">
+       <section class="testimonial testimonial-inverse section-mb-space sliderses">
             <div class="container">
                 <div class="row">
                     <div class="col-md-12">
