@@ -25,13 +25,12 @@ $ip = $_SERVER['REMOTE_ADDR'];
 
     <!--Google font-->
     <!-- <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&display=swap" rel="stylesheet"> -->
-    <link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
-    <link rel="stylesheet"
+    <!-- <link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet"> -->
+  <link rel="stylesheet"
           href="https://fonts.googleapis.com/css?family=Tangerine">
           <link rel="stylesheet"
           href="https://fonts.googleapis.com/css?family=Sofia">
-    
-    
+    <link href="assets/fonts/American-Typewriter.ttf?family=American" rel="stylesheet">
     <!--icon css-->
     <link rel="stylesheet" type="text/css" href="assets/css/font-awesome.css">
     <link rel="stylesheet" type="text/css" href="assets/css/themify.css">
@@ -49,42 +48,66 @@ $ip = $_SERVER['REMOTE_ADDR'];
     <link rel="stylesheet" type="text/css" href="assets/css/color1.css" media="screen" id="color">
 
 <style>
-    @font-face {
+.searchdivmobile {
+     display: none;
+     margin:auto;
+     /*position: absolute;*/
+     /*top: 20px;*/
+ }
+@media (max-width: 767px) {
+    .searchdiv {
+     display: none;
+     /*position: absolute;*/
+     /*top: 20px;*/
+ }
+  .searchdivmobile {
+     display: block;
+     /*position: absolute;*/
+     /*top: 20px;*/
+ }
+ .brand-logo {
+     display:inline-block;
+ }
+ .navmenu {
+     display : none;
+ }
+}
+ 
+
+    /* @font-face {
     font-family: sofia;
     src: url(https://fonts.googleapis.com/css?family=Sofia);
     font-weight: bold;
-}
+} */
 /* @font-face {
     font-family: Tangerine;
     src: url(https://fonts.googleapis.com/css?family=Tangerine);
     font-weight: bold;
 } */
-body {
+/* body {
     font-family: sofia, san-serif !important;
     background-color:white !important;
-}
+} */
     /* } */
 a {
-    color: #ff6000;
+    color: #1D3361;
 }
 .saerchInput{
-    border-bottom-left-radius:40px;
-    border-top-left-radius:40px;
+    border-radius:40px;
+    width:400px;
+    /* border-bottom-left-radius:40px;
+    border-top-left-radius:40px; */
     outline:none;
 
 }
 .saerchCategory{
     border-bottom-right-radius:40px;
     border-top-right-radius:40px;
+    outline:none;
 
 
 }
-.navCont{
-    background-color:white;
-}
-.navList{
-    color:black;
-}
+
 </style>
 
   </head>
@@ -134,9 +157,10 @@ a {
                     <div class="col-md-12">
                         <div class="main-menu-block">
                             <div class="menu-left">
-                                <div class="sm-nav-block">
-                                    <span class="sm-nav-btn"><i class="fa fa-bars"></i></span>
-                                    <ul class="nav-slide">
+                            
+                                <div class="sm-nav-block toggle-nav">
+                                    <span class="sm-nav-btn"><i class="fa fa-bars  sidebar-bar"></i></span>
+                                    <ul class="nav-slide sm pixelstrap desc-horizontal sm-vertical sm-blue">
                                         <li>
                                             <div class="nav-sm-back">
                                                 back <i class="fa fa-angle-right pl-2"></i>
@@ -145,7 +169,11 @@ a {
                                     <?php
                                                             foreach($categories as $c){
                                                         ?>
-                                                        <li><a href="category?id=<?php  echo $c['cat_id'] ?>"><?php echo $c['name'] ?></a></li>
+                                                        <li><a href="category?id=<?php  echo $c['cat_id'] ?>" class="desc-menu-item"><?php echo $c['name'] ?></a>
+                                                        <ul>
+                                                            <li><a target="_blank" href="index.html">layout 1</a></li>
+                                                        </ul>
+                                                        </li>
                                                         <?php } ?>
                                        
                                     </ul>
@@ -155,47 +183,51 @@ a {
                                         <img src="assets/images/layout-5/logo/logo.png" class="img-fluid  " alt="logo-header">
                                     </a>
                                 </div>
+                                
                             </div>
+                            <div class="searchdiv">
+                                                        <form class="big-deal-form mr-3 m-3" id="searchForm">
+                                                            <div class="input-group ">
+                                                                <!-- <div class="input-group-prepend">
+                                                                    <span class="search"><i class="fa fa-search"></i></span>
+                                                                </div> -->
+                                                                <input type="text" name="search" id="searchInput" class="form-control saerchInput col-12" placeholder="Search a Product" >
+                                                                <div class="input-group-prepend">
+                                                                <input type="submit" class="form-control saerchCategory" value="Search" class=" btn btn-secondary" style ="color:#fff; background-color:#FF76AF;" >
+                                                                    <!-- <select class="saerchCategory">
+                                                                        <option value="*">All Category</option>
+                                                                        <?php
+                                                                            foreach($categories as $c){
+                                                                        ?>
+                                                                        <option value="<?php echo $c['cat_id'] ?>"><?php echo $c['name'] ?></option>
+                                                                        <?php } ?>
+                                                                    </select> -->
+                                                                </div>
+                                                            </div>
+                                                        </form>
+                                            </div>
                             <div class="menu-right">
-                                <div class="toggle-block">
+                                <!-- <div class="toggle-block">
                                     <nav id="main-nav">
                                         <div class="toggle-nav"><i class="fa fa-bars sidebar-bar"></i></div>
                                         <ul id="main-menu" class="sm pixelstrap sm-horizontal">
                                             <li>
                                                 <div class="mobile-back text-right">Back<i class="fa fa-angle-right pl-2" aria-hidden="true"></i></div>
                                             </li>
-                                            <!--HOME-->
-                                            <li>
-                                              <form class="big-deal-form mt-3 mr-3" >
-                                               <div class="input-group ">
-                                                <!-- <div class="input-group-prepend">
-                                                    <span class="search"><i class="fa fa-search"></i></span>
-                                                </div> -->
-                                                  <input type="text" class="form-control saerchInput" placeholder="Search a Product">
-                                                  <div class="input-group-prepend">
-                                                    <select class="saerchCategory">
-                                                        <option value="*">All Category</option>
-                                                        <?php
-                                                            foreach($categories as $c){
-                                                        ?>
-                                                        <option value="<?php echo $c['cat_id'] ?>"><?php echo $c['name'] ?></option>
-                                                        <?php } ?>
-                                                    </select>
-                                                 </div>
-                                                </div>
-                                              </form>
-                                            </li>
-                                        <li>
-                                                <a href="/thelasergiftshop/">Home</a>
-                                               
-                                            </li>
-                                            <!--HOME-END-->
+                                            
+                                           
                                         </ul>
                                     </nav>
-                                </div>
+                                </div> -->
                                 <div>
                                     <div class="icon-nav">
                                         <ul>
+                                        
+                                         <li class="mr-3">
+                                            <a href="/"><i class="icon-home"></i></a>
+                                               
+                                            </li>
+                                           
                                         <?php 
                                                     if(isset($_SESSION['loggedIn'])){
                                                     ?>
@@ -203,7 +235,7 @@ a {
                                                     <?php
                                                     } else {
                                                         ?>
-                                                         <li class="mobile-user onhover-dropdown" onclick="openAccount()"><a href="javascript:void(0)"><i class="icon-user"></i></a>
+                                                         <li class="mobile-user onhover-dropdown my" onclick="openAccount()"><a href="javascript:void(0)"><i class="icon-user"></i></a>
                                             </li>
                                                         <?php
                                                     }
@@ -211,7 +243,7 @@ a {
                                                    
                                            
                                             <!-- <li class="mobile-wishlist" onclick="openWishlist()"><a href="#"><i class="icon-heart"></i><div class="cart-item"><div>0 item<span>wishlist</span></div></div></a></li> -->
-                                            <li class="mobile-search" onclick="openSearch()"><a href="javascript:void(0)"><i class="icon-search"></i></a>
+                                            <!-- <li class="mobile-search" onclick="openSearch()"><a href="javascript:void(0)"><i class="icon-search"></i></a>
                                                 <div class ="search-overlay">
                                                     <div>
                                                         <span class="close-mobile-search">×</span>
@@ -228,7 +260,7 @@ a {
                                                             </div>
                                                         </div>
                                                     </div>
-                                                </div></li>
+                                                </div></li> -->
                                             
                                         </ul>
                                         <div class="cart-block mobile-cart cart-hover-div" onclick="openCart()">
@@ -240,127 +272,88 @@ a {
                                     </div>
                                 </div>
                             </div>
+                            </div>
                         </div>
+                                                    <div class="searchdivmobile mt-2">
+                                                        <!--<form class="big-deal-formm mr-3 m-3" id="searchFormm" submit="preventDefault(e)">-->
+                                                            <div class="input-group ">
+                                                                <!-- <div class="input-group-prepend">
+                                                                    <span class="search"><i class="fa fa-search"></i></span>
+                                                                </div> -->
+                                                                <input type="text" name="searchm" id="searchInputm" class="form-control saerchInput col-12" placeholder="Search a Product" >
+                                                                <div class="input-group-prepend">
+                                                                <input type="submit" class="form-control saerchCategory" id="mobilesearch" value="Search" class=" btn btn-secondary" style ="color:#fff; background-color:#FF76AF;" >
+                                                                    <!-- <select class="saerchCategory">
+                                                                        <option value="*">All Category</option>
+                                                                        <?php
+                                                                            foreach($categories as $c){
+                                                                        ?>
+                                                                        <option value="<?php echo $c['cat_id'] ?>"><?php echo $c['name'] ?></option>
+                                                                        <?php } ?>
+                                                                    </select> -->
+                                                                </div>
+                                                            </div>
+                                                        <!--</form>-->
+                                            </div>
+
                     </div>
                 </div>
             </div>
         </div>
-        <div class="p-4  navCont" >
-            <div class="custom-container">
+        <!-- <div class="category-header category-header-inverse"> -->
+            <div class="custom-container navmenu">
                 <div class="row">
                     <div class="col">
                         <div class="navbar-menu">
-                            <div class="category-left">
+                            <!-- <div class="category-left"> -->
                                 <div class=" nav-block">
-                                    <div class="">
-                                        <nav class="row d-flex justify-content-between">
-                                        
-                                        <?php
-                                                foreach($categories as $c){
-                                            ?>
-                                            <ul>
-                                            <!-- data-toggle="collapse" data-target="#navbarToggleExternalContent" -->
-                                            <li>  <a  class="navList" href="category?id=<?php  echo $c['cat_id'] ?>"><?php echo $c["name"]; ?></a></li>
-                                            </ul>
-                                               <?php
-                                                }
-                                            ?>
-                                            <!-- <button class="navbar-toggler" type="button">
-                                                <span class="navbar-icon"><i class="fa fa-arrow-down"></i></span>
-                                            </button>
-                                            <h5 class="mb-0 ml-3 text-white title-font">Shop by category</h5> -->
-                                        </nav>
-                                        
-                                        <!-- <div class="collapse  nav-desk" id="navbarToggleExternalContent">
+                                    <div class="nav-left">
+                                        <nav class="navbar row d-flex justify-content-between">
+                                            <!-- <h5 class="mb-0 ml-3 text-white title-font">Shop by category</h5> -->
                                             <ul class="nav-cat title-font m-0" id="cat">
                                             <?php
                                                 foreach($categories as $c){
 
                                             ?>
-                                                    <li> <img src="assets/images/category/<?php echo $c["image"]; ?>" alt="category-banner"> <a  href="category?id=<?php  echo $c['cat_id'] ?>"><?php echo $c["name"]; ?></a></li>
+                                                    <li class="m-1 ml-3 "><a href="category?id=<?php  echo $c['cat_id'] ?>" class ="m-2"><img src="assets/images/category/<?php echo $c["image"]; ?>" alt="category-banner" style="height:30px; width:30px;" class="rounded-circle mr-1"><?php echo $c["name"]; ?></a></li>
                                                <?php
                                                 }
                                             ?>
                                             </ul>
-                                        </div> -->
+                                        </nav>
+                                       
                                     </div>
                                 </div>
-                                
-                            </div>
-                            <div class="category-right">
-                                <!-- <div class="contact-block mr-2">
-                                    <div>
-                                        <i class="fa fa-volume-control-phone"></i>
-                                        <span>call us<span>123-456-76890</span></span>
-                                    </div>
-                                </div>
-                                <div class="btn-group">
-                                    <div class="gift-block" data-toggle="dropdown" >
-                                        <div class="grif-icon">
-                                            <i class="icon-gift"></i>
-                                        </div>
-                                        <div class="gift-offer">
-                                            <p>gift box</p>
-                                            <span>Festivel Offer</span>
-                                        </div>
-                                    </div>
-                                    <div class="dropdown-menu gift-dropdown">
-                                        <div class="media">
-                                            <div  class="mr-3">
-                                                <img src="assets/images/icon/1.png" alt="Generic placeholder image">
-                                            </div>
-                                            <div class="media-body">
-                                                <h5 class="mt-0">Billion Days</h5>
-                                                <p><img src="assets/images/icon/currency.png" class="cash" alt="gift-block"> Flat Rs. 270 Rewards</p>
-                                            </div>
-                                        </div>
-                                        <div class="media">
-                                            <div  class="mr-3">
-                                                <img src="assets/images/icon/2.png" alt="Generic placeholder image">
-                                            </div>
-                                            <div class="media-body">
-                                                <h5 class="mt-0">Fashion Discount</h5>
-                                                <p><img src="assets/images/icon/fire.png"  class="fire" alt="gift">Extra 10% off (upto Rs. 10,000*) </p>
-                                            </div>
-                                        </div>
-                                        <div class="media">
-                                            <div  class="mr-3">
-                                                <img src="assets/images/icon/3.png" alt="Generic placeholder image">
-                                            </div>
-                                            <div class="media-body">
-                                                <h5 class="mt-0">75% off Store</h5>
-                                                <p>No coupon code is required.</p>
-                                            </div>
-                                        </div>
-                                        <div class="media">
-                                            <div  class="mr-3">
-                                                <img src="assets/images/icon/6.png" alt="Generic placeholder image">
-                                            </div>
-                                            <div class="media-body">
-                                                <h5 class="mt-0">Upto 50% off</h5>
-                                                <p>Buy popular phones under Rs.20.</p>
-                                            </div>
-                                        </div>
-                                        <div class="media">
-                                            <div  class="mr-3">
-                                                <img src="assets/images/icon/5.png" alt="Generic placeholder image">
-                                            </div>
-                                            <div class="media-body">
-                                                <h5 class="mt-0">Beauty store</h5>
-                                                <p><img src="assets/images/icon/currency.png" class="cash" alt="gift"> Flat Rs. 270 Rewards</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div> -->
-                            </div>
+                               
+                            <!-- </div> -->
+                           
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
+        <!-- </div> -->
     </header>
+                    <div class="collection-content col shadow" id="searchResult">
+                            <div class="page-main-content">
+                                <div class="row">
+                                    <div class="col-sm-12">
+                                            <h4>Search Result</h4>
+                                        <div class="collection-product-wrapper">
+                                        
+                                            <div class="product-wrapper-grid">
+                                                <div class="row" id="productResult">
+                                                    
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                    </div>
+
+
     <!-- Add to cart bar -->
-<div id="cart_side" class="add_to_cart">
+<div id="cart_side" class=" add_to_cart right">
     <a href="javascript:void(0)" class="overlay" onclick="closeCart()"></a>
     <div class="cart-inner">
         <div class="cart_top">
@@ -377,7 +370,7 @@ a {
                 <li>
                     <div class="media">
                         <a href="javascript:void(0)">
-                            <img alt="" class="mr-3" src="assets/images/layout-4/product/1.jpg">
+                            <img alt="" class="mr-3" src="assets/images/products/<?php echo $c['image'] ;?>">
                         </a>
                         <div class="media-body">
                             <a href="javascript:void(0)">
@@ -395,42 +388,7 @@ a {
                     </div>
                 </li>
                 <?php } ?>
-                <!-- <li>
-                    <div class="media">
-                        <a href="#">
-                            <img alt="" class="mr-3" src="assets/images/layout-4/product/2.jpg">
-                        </a>
-                        <div class="media-body">
-                            <a href="#">
-                                <h4>item name</h4>
-                            </a>
-                            <h4>
-                                <span>1 x $ 299.00</span>
-                            </h4>
-                        </div>
-                    </div>
-                    <div class="close-circle">
-                        <a href="#">
-                            <i class="ti-trash" aria-hidden="true"></i>
-                        </a>
-                    </div>
-                </li>
-                <li>
-                    <div class="media">
-                        <a href="#"><img alt="" class="mr-3" src="assets/images/layout-4/product/3.jpg"></a>
-                        <div class="media-body">
-                            <a href="#">
-                                <h4>item name</h4>
-                            </a>
-                            <h4><span>1 x $ 299.00</span></h4>
-                        </div>
-                    </div>
-                    <div class="close-circle">
-                        <a href="#">
-                            <i class="ti-trash" aria-hidden="true"></i>
-                        </a>
-                    </div>
-                </li> -->
+                
             </ul>
             <ul class="cart_total">
                 <li>
@@ -482,7 +440,23 @@ a {
         </form>
     </div>
 </div>
-<!-- Add to account bar end-->
+<!-- Quick-view modal popup start-->
+<div class="modal fade bd-example-modal-lg theme-modal" id="quick-view" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+        <div class="modal-content quick-view-modal">
+            <div class="modal-body">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <div class="row">
+                    <div class="col-lg-6 col-xs-12 m-3 p-3" id="searchresultmodal">
+                       
+                    </div>
+                   
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Quick-view modal popup end -->
     <script src="assets/js/jquery-3.3.1.min.js"></script>
 
     <!-- slick js-->
@@ -506,7 +480,7 @@ a {
     <!-- <script src="assets/js/timer.js"></script> -->
     <script src="assets/js/modal.js"></script>
     <script>
-        
+       $('#searchResult').hide();
         $('#btn2').click(function(){
                 email = $('#email').val();
                 password = $('#password').val();
@@ -516,17 +490,50 @@ a {
                         alert("Login Successfullly");
                     } else {
                         $('#msg').html("Incorrect Email or password");
+                        $('#quick-view').modal('show');
                         
                     }
                 })
 
             })
-            function closeCartss(){
-                // alert("hy")
-                // $("#cart-side").hidden()
-                document.getElementById("cart_side").style.display="none"
-                // document.getElementById('cart_side').style.color = 'red'
-            }
+     $('#searchForm').submit(function(){
+         event.preventDefault();
+         search = $('#searchInput').val();
+         $.post('handler.php',{search, request:'search'},function(data){
+             data = JSON.parse(data);
+             list = '';
+             if(data.length > 0){
+                let searchresult =data.map(s=>{
+                list += '<div class="col-xl-2 col-md-3 col-4  col-grid-box"><a href="product?id='+ s.slug +'"><div class="product"><div class="product-box"> <div class="product-imgbox"><div class="product-front"> <img src="assets/images/products/'+ s.image +'" class="img-fluid  " alt="product"></div><div class="product-back"><img src="assets/images/products/'+ s.image +'" class="img-fluid  " alt="product"></div></div><div class="product-detail detail-center "><div class="detail-title"><div class="detail-left"><a href="product?id='+ s.slug +'"><h6 class="price-title"> '+ s.name +'</h6></a></div><div class="detail-right"> <div class="price"><div class="price">From: &pound; '+ s.price +'</div></div></div></div><div class="icon-detail"><a href="product?id='+ s.slug +'"><i class="fa fa-eye" aria-hidden="true"></i></a></div></div></div></div></a> </div> '
+	  
+       })
+            $('#productResult').html(list);
+            $('#searchResult').show();
+             } else {
+                $('#searchresultmodal').html("<p> No product found</p>");
+             }
+         })
+
+     })       
+      $('#mobilesearch').click(function(){
+         event.preventDefault();
+         search = $('#searchInputm').val();
+         $.post('handler.php',{search, request:'search'},function(data){
+             data = JSON.parse(data);
+             list = '';
+             if(data.length > 0){
+                let searchresult =data.map(s=>{
+                list += '<div class="col-xl-2 col-md-3 col-4  col-grid-box"><a href="product?id='+ s.slug +'"><div class="product"><div class="product-box"> <div class="product-imgbox"><div class="product-front"> <img src="assets/images/products/'+ s.image +'" class="img-fluid  " alt="product"></div><div class="product-back"><img src="assets/images/products/'+ s.image +'" class="img-fluid  " alt="product"></div></div><div class="product-detail detail-center "><div class="detail-title"><div class="detail-left"><a href="product?id='+ s.slug +'"><h6 class="price-title"> '+ s.name +'</h6></a></div><div class="detail-right"> <div class="price"><div class="price">From: &pound; '+ s.price +'</div></div></div></div><div class="icon-detail"><a href="product?id='+ s.slug +'"><i class="fa fa-eye" aria-hidden="true"></i></a></div></div></div></div></a> </div> '
+	  
+       })
+            $('#productResult').html(list);
+            $('#searchResult').show();
+             } else {
+                $('#searchresultmodal').html("<p> No product found</p>");
+             }
+         })
+
+     })       
     function addTocart(){
         customtext = $('#custom').val();
         font = $('#font').val();

@@ -1,24 +1,5 @@
-
+<hr>
     <footer>
-    <div class="app-link-block">
-        <div class="container">
-            <div class="row">
-                <div class="app-link-bloc-contain">
-                    
-                    <div class="app-item-group ">
-                        <div class="sosiyal-block" >
-                            <h6>follow us</h6>
-                            <ul class="sosiyal">
-                                <li><a href="https://www.facebook.com/thelasergiftshop"><i class="fa fa-facebook" ></i></a></li>
-                                <li><a href="https://www.twitter.com/@thelasergiftshop"><i class="fa fa-twitter" ></i></a></li>
-                                <li><a href="https://www.instagram.com/@thelasergiftshop"><i class="fa fa-instagram" ></i></a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
     <div class="footer-1 section-mb-space">
         <div class="container">
             <div class="logo-contain">
@@ -95,6 +76,25 @@
                                     <ul class="contact-list">
                                         <li><i class="fa fa-envelope-o"></i>email us: enquiries@thelasergiftshop</li>
                                     </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="app-link-block" style="background:#FFFFFF;">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="app-link-bloc-contain">
+                                        
+                                        <div class="app-item-group ">
+                                            <div class="sosiyal-block" >
+                                                <h6>follow us</h6>
+                                                <ul class="sosiyal">
+                                                    <li><a href="https://www.facebook.com/thelasergiftshop"><i class="fa fa-facebook" ></i></a></li>
+                                                    <li><a href="https://www.twitter.com/@thelasergiftshop"><i class="fa fa-twitter" ></i></a></li>
+                                                    <li><a href="https://www.instagram.com/@thelasergiftshop"><i class="fa fa-instagram" ></i></a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>

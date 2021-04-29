@@ -4,7 +4,7 @@ if(!isset($_SESSION)){
     require_once '../classes/Dashboard.php';
     $obj = new Dashboard();
 
-  $shape = $obj->getshapes();
+  $shapes = $obj->getshapes();
 
 ?>
 <!DOCTYPE html>
@@ -125,9 +125,48 @@ if(!isset($_SESSION)){
                                         </div>
                                     </div>
                                 </div>
-                                <div class="table-responsive">
-                                    <div id="basicScenario" class="product-physical"></div>
+                                <div class="row">
+                    <div class="col-sm-12">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h5>Shape Lists</h5>
                                 </div>
+                                <div class="card-body">
+                                    <!-- <div id="basicScenario" class="product-list digital-product"></div> -->
+                                    <div class="col-sm-12  order-datatable">
+                                        <table class="display" id="basic-1">
+                                            <thead>
+                                            <tr class="table-head">
+                                                <th scope="col">Shape id</th>
+                                                <th scope="col">Name</th>
+                                                <th scope="col">Status</th>
+                                                <th scope="col">Action</th>
+                                            </tr>
+                                            </thead>
+                                                <?php foreach ($shapes as $shape){ ?>
+                                            <tbody>
+                                            <tr>
+                                                <td><?php echo $shape['shape_id'] ?></td>
+                                              
+                                                <td> <?php echo $shape['name'];?>
+                                                </td>
+                                               <td><?php echo $shape['status'];?></td>
+                                                <td>
+                                                    <a href="edit?id=<?php echo $shape['shape_id']?>" class="icon"><i class="fa fa-pencil"></i></a>
+                                                    <a href="delete?id=<?php echo $shape['shape_id']?>" class="icon"><i class="fa fa-trash"></i></a>
+                                            </td>
+                                            </tr>
+                                            
+                                            </tbody>
+                                            <?php } ?>
+                                            
+                                            
+                                        </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
                             </div>
                         </div>
                     </div>

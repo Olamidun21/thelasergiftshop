@@ -92,56 +92,47 @@ $Productlist= $obj->getProductlist();
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-sm-12">
-                        <div class="card">
-                            <div class="card-header">
-                                <h5>Product Lists</h5>
-                            </div>
-                            <div class="card-body">
-                                <!-- <div id="basicScenario" class="product-list digital-product"></div> -->
-                                <div class="col-sm-12 product-list digital-product">
-                <table class="table cart-table table-responsive-xs">
-                    <thead>
-                    <tr class="table-head">
-                        <th scope="col">Product id</th>
-                        <th scope="col">Image</th>
-                        <th scope="col">Product name</th>
-                        <th scope="col">Price</th>
-                        <th scope="col">action</th>
-                    </tr>
-                    </thead>
-                        <?php foreach ($Productlist as $p){ ?>
-                    <tbody>
-                    <tr>
-                        <td><?php echo $p['product_id'] ?></td>
-                        <td>
-                            <a href="#"><img src="../assets/images/products/<?php echo $p['productimage'];?>" alt="cart" class="img-thumbnail mx-auto d-block" style="width:100px; height:100px;"></a>
-                        </td>
-                        <td> <?php echo $p['productname'];?>
-                        </td>
-                        <td>
-                            &pound;<?php echo $p['price'];?>
-                        </td>
-                        <td><a href="addprices?id=<?php echo $p['product_id']?>" class="icon"><i class="fa fa-plus"></i></a>
-                            <a href="edit?id=<?php echo $p['product_id']?>" class="icon"><i class="fa fa-pencil"></i></a>
-                            <a href="delete?id=<?php echo $p['product_id']?>" class="icon"><i class="fa fa-trash"></i></a>
-                    </td>
-                    </tr>
-                    
-                    </tbody>
-                    <?php } ?>
-                    
-                    
-                </table>
-                <table class="table cart-table table-responsive-md">
-                    <tfoot>
-                    <tr>
-                        <td>total price :</td>
-                        <td>
-                            <h2>&pound;<?php $a =$obj->getCartTotal($ip); echo $a[0]['total'];?></h2></td>
-                    </tr>
-                    </tfoot>
-                </table>
-            </div>
+                            <div class="card">
+                                <div class="card-header">
+                                    <h5>Product Lists</h5>
+                                </div>
+                                <div class="card-body">
+                                    <!-- <div id="basicScenario" class="product-list digital-product"></div> -->
+                                    <div class="col-sm-12 product-list digital-product">
+                                        <table class="table cart-table table-responsive-xs">
+                                            <thead>
+                                            <tr class="table-head">
+                                                <th scope="col">Product id</th>
+                                                <th scope="col">Image</th>
+                                                <th scope="col">Product name</th>
+                                                <th scope="col">Price</th>
+                                                <th scope="col">action</th>
+                                            </tr>
+                                            </thead>
+                                                <?php foreach ($Productlist as $p){ ?>
+                                            <tbody>
+                                            <tr>
+                                                <td><?php echo $p['product_id'] ?></td>
+                                                <td>
+                                                    <a href="#"><img src="../assets/images/products/<?php echo $p['productimage'];?>" alt="cart" class="img-thumbnail mx-auto d-block" style="width:100px; height:100px;"></a>
+                                                </td>
+                                                <td> <?php echo $p['productname'];?>
+                                                </td>
+                                                <td>
+                                                    &pound;<?php echo $p['price'];?>
+                                                </td>
+                                                <td><a href="addprices?id=<?php echo $p['product_id']?>" class="icon"><i class="fa fa-plus"></i></a>
+                                                    <a href="edit?id=<?php echo $p['product_id']?>" class="icon"><i class="fa fa-pencil"></i></a>
+                                                    <a href="delete?id=<?php echo $p['product_id']?>" class="icon"><i class="fa fa-trash"></i></a>
+                                            </td>
+                                            </tr>
+                                            
+                                            </tbody>
+                                            <?php } ?>
+                                            
+                                            
+                                        </table>
+                                </div>
                             </div>
                         </div>
                     </div>

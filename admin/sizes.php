@@ -4,7 +4,7 @@ if(!isset($_SESSION)){
     require_once '../classes/Dashboard.php';
     $obj = new Dashboard();
 
-  $size = $obj->getsizes();
+  $sizes = $obj->getsizes();
 
 ?>
 <!DOCTYPE html>
@@ -125,9 +125,48 @@ if(!isset($_SESSION)){
                                         </div>
                                     </div>
                                 </div>
-                                <div class="table-responsive">
-                                    <div id="basicScenario" class="product-physical"></div>
+                <div class="row">
+                    <div class="col-sm-12">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h5>Size Lists</h5>
                                 </div>
+                                <div class="card-body">
+                                    <!-- <div id="basicScenario" class="product-list digital-product"></div> -->
+                                    <div class="col-sm-12  order-datatable">
+                                        <table class="display" id="basic-1">
+                                            <thead>
+                                            <tr class="table-head">
+                                                <th scope="col">Size id</th>
+                                                <th scope="col">Name</th>
+                                                <th scope="col">Status</th>
+                                                <th scope="col">action</th>
+                                            </tr>
+                                            </thead>
+                                                <?php foreach ($sizes as $size){ ?>
+                                            <tbody>
+                                            <tr>
+                                                <td><?php echo $size['size_id'] ?></td>
+                                              
+                                                <td> <?php echo $size['name'];?>
+                                                </td>
+                                               <td><?php echo $size['status'];?></td>
+                                                <td>
+                                                    <a href="edit?id=<?php echo $size['size_id']?>" class="icon"><i class="fa fa-pencil"></i></a>
+                                                    <a href="delete?id=<?php echo $size['size_id']?>" class="icon"><i class="fa fa-trash"></i></a>
+                                            </td>
+                                            </tr>
+                                            
+                                            </tbody>
+                                            <?php } ?>
+                                            
+                                            
+                                        </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
                             </div>
                         </div>
                     </div>

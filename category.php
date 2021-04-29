@@ -31,8 +31,9 @@ if(!isset($_SESSION)){
     <link rel="shortcut icon" href="assets/images/favicon/favicon.ico" type="image/x-icon">
 
     <!--Google font-->
-    <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
+    <!-- <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet"> -->
+    <link href="assets/fonts/American-Typewriter.ttf" rel="stylesheet">
 
     <!--icon css-->
     <link rel="stylesheet" type="text/css" href="assets/css/font-awesome.css">
@@ -58,13 +59,17 @@ if(!isset($_SESSION)){
     font-weight: bold;
 }
 .media-body {
-    font-family: mishaland, san-serif !important;
+    /* font-family: mishaland, san-serif !important; */
 }
 body{
      background-color:white !important;
 }
 .cardBorder{
    border-radius:10px
+}
+.product-imgbox {
+    border-radius: 20px !important;
+    background-color:#f8f9fa !important;
 }
     </style>
 </head>
@@ -103,16 +108,29 @@ body{
 </div>
 <!-- breadcrumb End -->
 
+<section class="brand-panel">
+  <div class="brand-panel-box">
+    <div class="brand-panel-contain ">
+      <ul>
+        <li><a href="#">SubCategories</a></li>
+        <li><a>:</a></li>
+        <?php
+                            foreach($subcats as $c){
+                        ?>
+        <li><a href="subcategory?id=<?php  echo $c['sub_cat_id'] ?>"><?php echo $c['name'] ?></a></li>
+        <?php } ?>
+      </ul>
+    </div>
+  </div>
 
+</section>
 <!-- section start -->
 <section class="section-big-pt-space ratio_asos">
     <div class="collection-wrapper">
         <div class="custom-container">
             <div class="row">
-                <div class="col-sm-3 collection-filter category-page-side">
-                    <!-- side-bar colleps block stat -->
+                <!-- <div class="col-sm-3 collection-filter category-page-side">
                     <div class="collection-filter-block creative-card creative-inner category-side">
-                        <!-- brand filter start -->
                         <div class="collection-mobile-back"><span class="filter-back"><i class="fa fa-angle-left" aria-hidden="true"></i> back</span></div>
                         <?php
                             foreach($subcats as $c){
@@ -123,29 +141,23 @@ body{
                                 <div class="media">
                                 
                                     <div class="media-body">
-                                    <a href="subcategory?id=<?php  echo $c['sub_cat_id'] ?>"><h3 style="font-family:mishaland, san-serif;color:black"><?php echo $c['name'] ?></h3></a>
+                                    <a href="subcategory?id=<?php  echo $c['sub_cat_id'] ?>"><h3 style=""><?php echo $c['name'] ?></h3></a>
                                     </div>
                                 </div>
                         
                             </div>
-                        <!-- <div class="collection-collapse-block open">
-                            <a href="category?id=<?php echo $c['sub_cat_id'] ?>"><h3 class="collapse-block-title mt-0"><?php echo $c['name'] ?></h3></a>
-                         
-                        </div> -->
                         <?php
                             }
                         ?>
                         
                     </div>
-                    <!-- silde-bar colleps block end here -->
                  
-                </div>
+                </div> -->
                 <div class="collection-content col ">
                     <div class="page-main-content">
                         <div class="row">
                             <div class="col-sm-12">
                                 <div class="top-banner-wrapper ">
-                                    <!-- <a href="#"><img src="assets/images/category/<?php echo $category[0]['image']; ?>" class="img-fluid " alt=""></a> -->
                                     <div class="top-banner-content small-section">
                                         <p><?php echo $category[0]["name"]; ?></p>
                                       </div>
@@ -155,17 +167,17 @@ body{
                                     <div class="product-wrapper-grid ">
                                         <div class="row" id="product">
                                            <?php foreach($catproduct as $p){ ?>
-                                            <div class="col-xl-3 col-md-4 col-6  col-grid-box shadow-sm  cardBorder">
+                                            <div class="col-xl-2 col-md-2 col-4  col-grid-box">
                                             
-                                            <a href="product?id=<?php echo $p['name'] ?>">
+                                            <a href="product?id=<?php echo $p['slug'] ?>">
                                                 <div class="product">
                                                     <div class="product-box">
                                                         <div class="product-imgbox">
                                                             <div class="product-front">
-                                                                <img src="assets/images/products/<?php echo $p['image'] ?>" class="img-fluid  " alt="product">
+                                                                <img src="assets/images/products/<?php echo $p['image'] ?>" class="img-fluid  " style="width:100%; height:100%" alt="product">
                                                             </div>
                                                             <div class="product-back">
-                                                                <img src="assets/images/products/<?php echo $p['image'] ?>" class="img-fluid  " alt="product">
+                                                                <img src="assets/images/products/<?php echo $p['image'] ?>" class="img-fluid  " style="width:100%; height:100%" alt="product">
                                                             </div>
                                                         </div>
                                                         <div class="product-detail detail-center ">
@@ -179,7 +191,7 @@ body{
                                                                         <i class="fa fa-star"></i>
                                                                     </div> -->
                                                                     <!-- <p> <?php echo $p['short_description'] ?></p> -->
-                                                                    <a href="product?id=<?php echo $p['name'] ?>">
+                                                                    <a href="product?id=<?php echo $p['slug'] ?>">
                                                                         <h6 class="price-title">
                                                                             <?php echo $p['name'] ?>
                                                                         </h6>
@@ -200,7 +212,7 @@ body{
                                                                 <!-- <button data-toggle="modal" data-target="#addtocart" title="Add to cart">
                                                                     <i class="ti-bag" ></i>
                                                                 </button> -->
-                                                                <a href="product?id=<?php echo $p['name'] ?>">
+                                                                <a href="product?id=<?php echo $p['slug'] ?>">
                                                                     <i class="fa fa-eye" aria-hidden="true"></i>
                                                                 </a>
                                                                

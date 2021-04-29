@@ -307,7 +307,7 @@ if(!isset($_SESSION)){
                                         <input class="form-control" id="price" type="text" required="" name="price" value="<?php echo $product[0]['price'] ;?>">
                                                
                                             </div>
-                                            <input type="hidden" name="addproductprice"/>
+                                            <input type="hidden" value="addproductprice" name="request"/>
                                             <!-- Container-fluid Ends-->
                                     <div class="form-group mb-0">
                                         <div class="product-buttons text-center">
