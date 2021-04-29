@@ -186,7 +186,7 @@ a {
                                               </form>
                                             </li>
                                         <li>
-                                                <a href="/">Home</a>
+                                                <a href="/thelasergiftshop/">Home</a>
                                                
                                             </li>
                                             <!--HOME-END-->
@@ -366,7 +366,7 @@ a {
         <div class="cart_top">
             <h3>my cart</h3>
             <div class="close-cart">
-                <a href="javascript:void(0)" onclick="closeCart()">
+                <a href="javascript:void(0)" onclick="closeCartss()">
                     <i class="fa fa-times" aria-hidden="true"></i>
                 </a>
             </div>
@@ -521,7 +521,12 @@ a {
                 })
 
             })
-            
+            function closeCartss(){
+                // alert("hy")
+                // $("#cart-side").hidden()
+                document.getElementById("cart_side").style.display="none"
+                // document.getElementById('cart_side').style.color = 'red'
+            }
     function addTocart(){
         customtext = $('#custom').val();
         font = $('#font').val();

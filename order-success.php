@@ -32,7 +32,7 @@
     <!-- Theme css -->
     <link rel="stylesheet" type="text/css" href="../assets/css/color5.css" media="screen" id="color">
 </head>
-<body class="bg-light">
+<body class="bg-white">
 
 <!-- loader start -->
 <div class="loader-wrapper">
@@ -47,7 +47,7 @@
 <!--header end-->
 
 <!-- thank-you section start -->
-<section class="section-big-py-space light-layout">
+<section class="section-big-py-space">
     <div class="container">
         <div class="row">
             <div class="col-md-12">
@@ -64,7 +64,7 @@
 
 
 <!-- order-detail section start -->
-<section class="section-big-py-space mt--5 bg-light">
+<section class="section-big-py-space mt--5">
     <div class="custom-container">
         <div class="row">
             <div class="col-lg-6">

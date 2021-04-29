@@ -91,7 +91,7 @@ body{
                     <div>
                         <h2><?php echo $category[0]['name']  ?></h2>
                         <ul>
-                            <li><a href="/">home</a></li>
+                            <li><a href="/thelasergiftshop/">home</a></li>
                             <li><i class="fa fa-angle-double-right"></i></li>
                             <li><a href="category?id=<?php echo $category[0]['cat_id'] ?>"><?php echo $category[0]['name']  ?></a></li>
                         </ul>
@@ -123,7 +123,7 @@ body{
                                 <div class="media">
                                 
                                     <div class="media-body">
-                                    <a href="subcategory?id=<?php  echo $c['sub_cat_id'] ?>"><h3 style="font-family:mishaland, san-serif;"><?php echo $c['name'] ?></h3></a>
+                                    <a href="subcategory?id=<?php  echo $c['sub_cat_id'] ?>"><h3 style="font-family:mishaland, san-serif;color:black"><?php echo $c['name'] ?></h3></a>
                                     </div>
                                 </div>
                         

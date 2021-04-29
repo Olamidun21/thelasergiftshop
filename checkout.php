@@ -54,7 +54,7 @@ $ip = $_SERVER['REMOTE_ADDR'];
 <link rel="stylesheet" type="text/css" href="assets/stripe/css/example4.css" data-rel-css="" />
 
 </head>
-<body class="bg-light">
+<body class="bg-white">
 
 <!-- loader start -->
 <div class="loader-wrapper">
@@ -92,18 +92,18 @@ include_once 'navs.php';
 <!-- breadcrumb End -->
 
 <!-- section start -->
-<section class="section-big-py-space bg-light">
+<section class="section-big-py-space bg-white">
     <div class="custom-container">
         <div class="checkout-page contact-page">
             <div class="checkout-form">
                 <form action="charge" method="post" id="payment-form">
                     <div class="row">
                         <?php if(count($billing) > 0){ ?>
-                            <div class="col-lg-6 col-sm-12 col-xs-12">
+                            <div class="col-lg-6 col-sm-12 col-xs-12 ">
                                 <div class="checkout-title">
                                     <h3>Billing Details</h3></div>
-                                <div class="theme-form">
-                                <div class="row check-out ">
+                                <div class="theme-form ">
+                                <div class="row check-out shadow-sm">
 
                                     <div class="form-group col-md-6 col-sm-6 col-xs-12">
                                         <label>First Name *</label>
@@ -141,10 +141,6 @@ include_once 'navs.php';
                                         <label class="field-label">Postal Code</label>
                                         <input type="text" name="field-name" value="<?php echo $billing[0]['postcode']; ?>" placeholder="">
                                     </div>
-                                    <!-- <div class="form-group col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                                        <input type="checkbox" name="shipping-option" id="account-option"> &ensp;
-                                        <label for="account-option">Create An Account?</label>
-                                    </div> -->
                                 </div>
                             </div>
                         </div>
@@ -154,8 +150,8 @@ include_once 'navs.php';
                         <div class="col-lg-6 col-sm-12 col-xs-12">
                             <div class="checkout-title">
                                 <h3>Billing Details</h3></div>
-                            <div class="theme-form">
-                                <div class="row check-out ">
+                            <div class="theme-form shadow-sm bg-white" >
+                                <div class="row check-out" >
 
                                     <div class="form-group col-md-6 col-sm-6 col-xs-12">
                                         <label>First Name</label>
@@ -202,7 +198,7 @@ include_once 'navs.php';
                         </div>
                         <?php }?>
                         <div class="col-lg-6 col-sm-12 col-xs-12">
-                            <div class="checkout-details theme-form  section-big-mt-space">
+                            <div class="checkout-details theme-form  section-big-mt-space shadow-sm bg-white">
                                 <?php 
                                 if(isset($_POST['request'])){
                                     $request = $_POST['request'];

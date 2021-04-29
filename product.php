@@ -200,10 +200,13 @@ if(!isset($_SESSION)){
 /*    src: url(assets/fonts/);*/
 /*    font-weight: bold;*/
 /*}*/
+body{
+    background-color:white !important;
+}
 
     </style>
 </head>
-<body class="bg-light">
+<body>
 <!-- loader start -->
 <div class="loader-wrapper">
     <div>
@@ -238,12 +241,12 @@ if(!isset($_SESSION)){
 <!-- breadcrumb End -->
 
 <!-- section start -->
-<section class="section-big-pt-space bg-light">
+<section class="section-big-pt-space">
     <div class="collection-wrapper">
         <div class="custom-container">
-            <div class="row">
-                <div class="col-lg-4">
-                    <div class="product-slick">
+            <div class="row ">
+                <div class="col-lg-4" style="background-color:inherit" >
+                    <div class="product-slick shadow">
                         <div><img src="assets/images/products/<?php echo $productss[0]['image'] ?>" alt="" class="img-fluid  image_zoom_cls-0"></div>
                         <div><img src="assets/images/products/<?php echo $productss[0]['image'] ?>" alt="" class="img-fluid  image_zoom_cls-1"></div>
                         <div><img src="assets/images/products/<?php echo $productss[0]['image'] ?>" alt="" class="img-fluid  image_zoom_cls-2"></div>
@@ -289,7 +292,7 @@ if(!isset($_SESSION)){
                     </div>
                 </div>
                 <div class="col-lg-4">
-                    <form id="specs" method="post" action="checkout">
+                    <form id="specs" method="post" class="shadow" action="checkout">
                     <input type="hidden" name="name" value="<?php echo $productss[0]['name']; ?>"/>
                     <input type="hidden" name="scp_id" value="<?php echo $productss[0]['scp_id']; ?>"/>
                     <input type="hidden" name="product_id" value="<?php echo $productss[0]['product_id']; ?>"/>
@@ -387,7 +390,7 @@ if(!isset($_SESSION)){
 <section class="tab-product  tab-exes">
     <div class="custom-container">
         <div class="row">
-            <div class="col-sm-12 col-lg-12">
+            <div class="col-sm-12 col-lg-12 shadow mb-4">
                <div class="creative-card creative-inner">
                    <ul class="nav nav-tabs nav-material" id="top-tab" role="tablist">
                        <li class="nav-item"><a class="nav-link active" id="top-home-tab" data-toggle="tab" href="#top-home" role="tab" aria-selected="true">Description</a>
