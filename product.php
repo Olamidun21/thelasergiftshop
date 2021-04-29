@@ -15,6 +15,7 @@ if(!isset($_SESSION)){
     $productssmate = $obj->getProductmaterial($pid);
     $productssholes = $obj->getProductHole($pid);
     $productssimages = $obj->getProductImages($pid);
+    $colors = $obj->getcolors();
     // print_r($productss[0]);
     // $productss = $obj->getCatProducts($cate);
     // $bestselling = $obj->getBestSelling();
@@ -37,8 +38,13 @@ if(!isset($_SESSION)){
     <link rel="shortcut icon" href="assets/images/favicon/favicon.ico" type="image/x-icon">
 
     <!--Google font-->
-    <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
+    <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css?family=Tangerine">
+          <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css?family=Sofia">
+    <link href="assets/fonts/American-Typewriter.ttf?family=American" rel="stylesheet">
+    <!-- <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet"> -->
 
     <!--icon css-->
     <link rel="stylesheet" type="text/css" href="assets/css/font-awesome.css">
@@ -55,10 +61,10 @@ if(!isset($_SESSION)){
     <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.css">
 
     <!-- Theme css -->
-    <link rel="stylesheet" type="text/css" href="assets/css/color1.css" media="screen" id="color">
+    <link rel="stylesheet" type="text/css" href="assets/css/color2.css" media="screen" id="color">
 
     <!-- fonts -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
+    <!-- <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia"> -->
     <style>
         @font-face {
             font-family: Rochester;
@@ -203,7 +209,7 @@ if(!isset($_SESSION)){
 
     </style>
 </head>
-<body class="bg-light">
+<body>
 <!-- loader start -->
 <div class="loader-wrapper">
     <div>
@@ -238,16 +244,23 @@ if(!isset($_SESSION)){
 <!-- breadcrumb End -->
 
 <!-- section start -->
-<section class="section-big-pt-space bg-light">
+<section class="section-big-pt-space">
     <div class="collection-wrapper">
         <div class="custom-container">
             <div class="row">
-                <div class="col-lg-4">
+                <div class="col-lg-3">
                     <div class="product-slick">
                         <div><img src="assets/images/products/<?php echo $productss[0]['image'] ?>" alt="" class="img-fluid  image_zoom_cls-0"></div>
-                        <div><img src="assets/images/products/<?php echo $productss[0]['image'] ?>" alt="" class="img-fluid  image_zoom_cls-1"></div>
-                        <div><img src="assets/images/products/<?php echo $productss[0]['image'] ?>" alt="" class="img-fluid  image_zoom_cls-2"></div>
-                        <div><img src="assets/images/products/<?php echo $productss[0]['image'] ?>" alt="" class="img-fluid  image_zoom_cls-3"></div>
+                        <?php if(count($productssimages) > 0){ 
+                                foreach($productssimages as $image){        
+                      ?> 
+                        <div><img src="assets/images/products/<?php echo $image['url'] ?>" alt="" class="img-fluid  image_zoom_cls-1"></div>
+                        <!-- <div><img src="assets/images/products/<?php echo $productssimages[1]['image'] ?>" alt="" class="img-fluid  image_zoom_cls-2"></div>
+                        <div><img src="assets/images/products/<?php echo $productssimages[2]['image'] ?>" alt="" class="img-fluid  image_zoom_cls-3"></div> -->
+                   <?php
+                            }
+                         } 
+                ?>
                     </div>
                     <div class="row">
                         <div class="col-12 p-0">
@@ -259,14 +272,14 @@ if(!isset($_SESSION)){
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4">
+                <div class="col-lg-3">
                     <div class="product-right product-description-box">
                         <h2><?php echo $productss[0]["name"] ?></h2>
                         <div class="border-product">
                             <h6 class="product-title">product details</h6>
                             <p><?php echo $productss[0]["short_description"] ?></p>
                         </div>
-                       
+                      
                         <div class="border-product">
                             <h6 class="product-title">100% SECURE PAYMENT</h6>
                             <div class="payment-card-bottom">
@@ -284,33 +297,44 @@ if(!isset($_SESSION)){
                                         <a href="#"><img src="assets/images/pay/4.png" alt=""></a>
                                     </li>
                                 </ul>
-                            </div>
+                            </div><br>
+                            <div class="border-product"> 
+                            <h6 class="product-title">Available in these colors</h6>
+                       <?php foreach($productsscolors as $c){?>
+                        <div class="text-center mr-1" style="display:inline-block;">     
+                            <img src ="assets/color/<?php echo $c['image'];?>" class="rounded" style="width:30px; height:30px;"/>
+                            <p><?php echo $c['name'];?></p>
+                        </div>
+                        
+                      <?php } ?>
+                       </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4">
+                <div class="col-lg-6">
                     <form id="specs" method="post" action="checkout">
                     <input type="hidden" name="name" value="<?php echo $productss[0]['name']; ?>"/>
                     <input type="hidden" name="scp_id" value="<?php echo $productss[0]['scp_id']; ?>"/>
                     <input type="hidden" name="product_id" value="<?php echo $productss[0]['product_id']; ?>"/>
                     <div class="product-right product-form-box">
                         <h3>From: &pound;<?php echo $productss[0]["price"]; ?><input type="hidden" name="price" value="<?php echo $productss[0]['price']; ?>"/></h3>
-                        <h4>Personalise Product</h4>
+                        <h5 style="color:#000;">Personalise Product</h5>
                         <?php if($productss[0]["customizeable"] == "yes"){ ?>
                         <div class="row">
-                        <input type = "text" class="form-control col-7 ml-1 mr-1" name="custom" id="custom" placeholder="Customisation Message"><input type="button" value="View Text" class="btn btn-info col-3" id="viewtext" style="background:#ff6000;" ><br>
+                        <input type = "text" class="form-control col-9 mr-1" name="custom" id="custom" placeholder="Customisation Message"><input type="button" value="View Text" class="btn btn-primary col-2" id="viewtext" ><br>
                         </div>
-                        <small>**Please enter the text required for personalisation. Ensure all spellings are correct. Text written in Capitals or small letters will be recreated in the same format. Also, note that the font preview is to depict the font style, not the font thickness of the applicable product</small>
+                        <small style="color:#000;"><b>**Please enter the text required for personalisation. Ensure all spellings are correct. Text written in Capitals or small letters will be recreated in the same format. Also, note that the font preview is to depict the font style, not the font thickness of the applicable product</b></small>
                         <?php } ?>
                         <div class="product-description border-product">
                         <?php if($productss[0]["color"] == "yes"){ ?>
+                           
                             <h6 class="product-title">select color</h6>
                             <select class="form-control col-4" name="color" id="colour">
                                     <option value="0"></option>
                                         <?php foreach($productsscolors as $pc){ ?>
                                             <option value="<?php echo $pc['name'] ?>"><?php echo $pc["name"] ?></option>
                                         <?php } ?>
-                                        </select><br>
+                                        </select>
                                         <?php } ?>
                                         <?php if($productss[0]["font"] == "yes"){ ?>
                                         <h6 class="product-title">select font</h6>

@@ -284,7 +284,7 @@ if(!isset($_SESSION)){
     // );
 			$('#btn').click(function(e){
 			// $('#form').submit(function(e){
-				e.preventDefault();
+				event.preventDefault();
 				let email = $('#email').val();
 				let password = $("#password").val();
 				$.post('admin.php',{ email, password, request: 'login' }, function(res){

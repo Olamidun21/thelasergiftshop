@@ -62,10 +62,31 @@ if(!isset($_SESSION)){
     body{
         background-color:white !important;
     }
-    .sliderses{
-        background-color:lightgrey !important;
-
+    .rounded-category {
+        background-color:#f8f9fa !important;
+        border-radius: 30px;
+        margin :30px;
+       
     }
+    .testimonial {
+        background-color:#f8f9fa !important;
+        border-radius: 30px;
+        margin :30px;
+       
+    }
+   .rounded-category .btn-rounded {
+        background-color: #ff76af !important;
+        color:#1d3361 !important;
+    
+   }
+   .slider-banner {
+    border-radius: 30px !important;
+        margin :30px !important;
+   }
+    /* .sliderses{
+        background-color:#f8f9fa !important;
+
+    } */
     </style>
   </head>
   <body>
@@ -88,7 +109,7 @@ if(!isset($_SESSION)){
             <div class="row ">
                 <div class="col-12 p-0 ">
                     <div class="slide-1 no-arrow ">
-                        <div> 
+                        <div class="slid"> 
                             <div class="slider-banner slide-banner-4">
                                 <div class="slider-img ">
                                     <ul class="layout5-slide-1">
@@ -107,7 +128,7 @@ if(!isset($_SESSION)){
                                 </div>
                             </div>
                         </div>
-                        <div>
+                        <div class="slid">
                             <div class="slider-banner slide-banner-4">
                                 <div class="slider-img">
                                     <ul class="layout5-slide-2">
@@ -126,7 +147,7 @@ if(!isset($_SESSION)){
                                 </div>
                             </div>
                         </div>
-                        <div>
+                        <div class="slid">
                             <div class="slider-banner slide-banner-4">
                                 <div class="slider-img">
                                     <ul class="layout5-slide-3">
@@ -277,7 +298,7 @@ if(!isset($_SESSION)){
                             
                                     <div class="slide-5 product-m no-arrow">
                                         <div>
-                                            <div class="media-banner media-banner-1 border-0 cardList shadow-sm mt-4 mb-4">
+                                            <div class="media-banner media-banner-1 border-0 cardList shadow mt-4 mb-4">
                                                         <div class="media-banner-box">
                                                             <div class="media">
                                                                 <img style = "width:100px; height:100px;" src="assets/images/products/<?php echo $product[0]['image']; ?>" class="img-fluid " alt="banner">
@@ -347,7 +368,7 @@ if(!isset($_SESSION)){
                                             </div>
                                         </div>
                                         <div>
-                                            <div class="media-banner media-banner-1 border-0 cardList shadow-sm mt-4 mb-4">
+                                            <div class="media-banner media-banner-1 border-0 cardList shadow mt-4 mb-4">
                                             <div class="media-banner-box">
                                                         <div class="media">
                                                             <img style = "width:100px; height:100px;" src="assets/images/products/<?php echo $product[3]['image']; ?>" class="img-fluid " alt="banner">
@@ -415,7 +436,7 @@ if(!isset($_SESSION)){
                                             </div>
                                         </div>
                                         <div>
-                                            <div class="media-banner media-banner-1 border-0 cardList shadow-sm mt-4 mb-4">
+                                            <div class="media-banner media-banner-1 border-0 cardList shadow mt-4 mb-4">
                                             <div class="media-banner-box">
                                                         <div class="media">
                                                             <img style = "width:100px; height:100px;" src="assets/images/products/<?php echo $product[6]['image']; ?>" class="img-fluid " alt="banner">
@@ -485,7 +506,7 @@ if(!isset($_SESSION)){
                                             </div>
                                         </div>
                                         <div>
-                                        <div class="media-banner media-banner-1 border-0 cardList shadow-sm mt-4 mb-4">
+                                        <div class="media-banner media-banner-1 border-0 cardList shadow mt-4 mb-4">
                                         <div class="media-banner-box">
                                                         <div class="media">
                                                             <img style = "width:100px; height:100px;" src="assets/images/products/<?php echo $product[9]['image']; ?>" class="img-fluid " alt="banner">
@@ -553,7 +574,7 @@ if(!isset($_SESSION)){
                                         </div>
                                      </div>
                                         <div>
-                                            <div class="media-banner media-banner-1 border-0 cardList shadow-sm mt-4 mb-4">
+                                            <div class="media-banner media-banner-1 border-0 cardList shadow mt-4 mb-4">
                                             <div class="media-banner-box">
                                                         <div class="media">
                                                             <img style = "width:100px; height:100px;" src="assets/images/products/<?php echo $product[12]['image']; ?>" class="img-fluid " alt="banner">
@@ -627,7 +648,7 @@ if(!isset($_SESSION)){
                                 
                                     <div class="slide-5 product-m no-arrow">
                                         <div>
-                                            <div class="media-banner media-banner-1 border-0 cardList shadow-sm mt-4 mb-4">
+                                            <div class="media-banner media-banner-1 border-0 cardList shadow mt-4 mb-4">
                                             <div class="media-banner-box">
                                                             <div class="media">
                                                                 <img style = "width:100px; height:100px;" src="assets/images/products/<?php echo $featured[0]['image']; ?>" class="img-fluid " alt="banner">
@@ -695,7 +716,7 @@ if(!isset($_SESSION)){
                                             </div>
                                         </div>
                                         <div>
-                                            <div class="media-banner media-banner-1 border-0 cardList shadow-sm mt-4 mb-4">
+                                            <div class="media-banner media-banner-1 border-0 cardList shadow mt-4 mb-4">
                                             <div class="media-banner-box">
                                                         <div class="media">
                                                             <img style = "width:100px; height:100px;" src="assets/images/products/<?php echo $featured[3]['image']; ?>" class="img-fluid " alt="banner">
@@ -763,7 +784,7 @@ if(!isset($_SESSION)){
                                             </div>
                                         </div>
                                         <div>
-                                            <div class="media-banner media-banner-1 border-0 cardList shadow-sm mt-4 mb-4">
+                                            <div class="media-banner media-banner-1 border-0 cardList shadow mt-4 mb-4">
                                             <div class="media-banner-box">
                                                         <div class="media">
                                                             <img style = "width:100px; height:100px;" src="assets/images/products/<?php echo $featured[6]['image']; ?>" class="img-fluid " alt="banner">
@@ -831,7 +852,7 @@ if(!isset($_SESSION)){
                                             </div>
                                         </div>
                                         <div>
-                                        <div class="media-banner media-banner-1 border-0 cardList shadow-sm mt-4 mb-4">
+                                        <div class="media-banner media-banner-1 border-0 cardList shadow mt-4 mb-4">
                                         <div class="media-banner-box">
                                                         <div class="media">
                                                             <img style = "width:100px; height:100px;" src="assets/images/products/<?php echo $featured[9]['image']; ?>" class="img-fluid " alt="banner">
@@ -899,7 +920,7 @@ if(!isset($_SESSION)){
                                         </div>
                                      </div>
                                         <div>
-                                            <div class="media-banner media-banner-1 border-0 cardList shadow-sm mt-4 mt-4">
+                                            <div class="media-banner media-banner-1 border-0 cardList shadow mt-4 mt-4">
                                             <div class="media-banner-box">
                                                         <div class="media">
                                                             <img style = "width:100px; height:100px;" src="assets/images/products/<?php echo $featured[12]['image']; ?>" class="img-fluid " alt="banner">
@@ -977,7 +998,7 @@ if(!isset($_SESSION)){
                             <?php if($b > 0){ ?>
                                 <div class="slide-5 product-m no-arrow">
                                             <div>
-                                                <div class="media-banner media-banner-1 border-0 cardList shadow-sm mt-4 mb-4">
+                                                <div class="media-banner media-banner-1 border-0 cardList shadow mt-4 mb-4">
                                                 <div class="media-banner-box">
                                                                 <div class="media">
                                                                     <img style = "width:100px; height:100px;" src="assets/images/products/<?php echo $bestselling[0]['image']; ?>" class="img-fluid " alt="banner">
@@ -1045,7 +1066,7 @@ if(!isset($_SESSION)){
                                                 </div>
                                             </div>
                                             <div>
-                                                <div class="media-banner media-banner-1 border-0 cardList shadow-sm mt-4 mb-4">
+                                                <div class="media-banner media-banner-1 border-0 cardList shadow mt-4 mb-4">
                                                 <div class="media-banner-box">
                                                             <div class="media">
                                                                 <img style = "width:100px; height:100px;" src="assets/images/products/<?php echo $bestselling[3]['image']; ?>" class="img-fluid " alt="banner">
@@ -1113,7 +1134,7 @@ if(!isset($_SESSION)){
                                                 </div>
                                             </div>
                                             <div>
-                                                <div class="media-banner media-banner-1 border-0 cardList shadow-sm mt-4 mb-4">
+                                                <div class="media-banner media-banner-1 border-0 cardList shadow mt-4 mb-4">
                                                 <div class="media-banner-box">
                                                             <div class="media">
                                                                 <img style = "width:100px; height:100px;" src="assets/images/products/<?php echo $bestselling[6]['image']; ?>" class="img-fluid " alt="banner">
@@ -1181,7 +1202,7 @@ if(!isset($_SESSION)){
                                                 </div>
                                             </div>
                                             <div>
-                                            <div class="media-banner media-banner-1 border-0 cardList shadow-sm mt-4 mb-4">
+                                            <div class="media-banner media-banner-1 border-0 cardList shadow mt-4 mb-4">
                                             <div class="media-banner-box">
                                                             <div class="media">
                                                                 <img style = "width:100px; height:100px;" src="assets/images/products/<?php echo $bestselling[9]['image']; ?>" class="img-fluid " alt="banner">
@@ -1249,7 +1270,7 @@ if(!isset($_SESSION)){
                                             </div>
                                         </div>
                                             <div>
-                                                <div class="media-banner media-banner-1 border-0 cardList shadow-sm mt-4 mb-4">
+                                                <div class="media-banner media-banner-1 border-0 cardList shadow mt-4 mb-4">
                                                 <div class="media-banner-box">
                                                             <div class="media">
                                                                 <img style = "width:100px; height:100px;" src="assets/images/products/<?php echo $bestselling[12]['image']; ?>" class="img-fluid " alt="banner">
@@ -1329,7 +1350,7 @@ if(!isset($_SESSION)){
 
 
     <!--rounded category start-->
-    <section class="rounded-category rounded-category-inverse rounded-category sliderses" id="categor">
+    <section class="rounded-category" id="categor">
         <div class="container" >
             <div class="row">
                 <div class="col">
@@ -1376,7 +1397,7 @@ if(!isset($_SESSION)){
 
  
        <!--testimonial start-->
-       <section class="testimonial testimonial-inverse section-mb-space sliderses">
+       <section class="testimonial section-mb-space sliderses">
             <div class="container">
                 <div class="row">
                     <div class="col-md-12">
@@ -1389,7 +1410,7 @@ if(!isset($_SESSION)){
                                         </div>
                                         <div class="media-body">
                                             <h5></h5>
-                                            <p>Excellent Product. Item exactly has advertised.</p>
+                                            <p style="color:#1d3361;">Excellent Product. Item exactly has advertised.</p>
                                         </div>
                                     </div>
                                 </div>
@@ -1402,7 +1423,7 @@ if(!isset($_SESSION)){
                                         </div>
                                         <div class="media-body">
                                             <h5></h5>
-                                           <p>The Cake Topper was Perfect. I was a bit worried about get the write thing, but it wasn’t a problem at all. I love using cake toppers from The Laser Gift shop when I need one.</p>
+                                           <p style="color:#1d3361;"> The Cake Topper was Perfect. I was a bit worried about get the write thing, but it wasn’t a problem at all. I love using cake toppers from The Laser Gift shop when I need one.</p>
                                         </div>
                                     </div>
                                 </div>
@@ -1415,7 +1436,7 @@ if(!isset($_SESSION)){
                                         </div>
                                         <div class="media-body">
                                             <h5></h5>
-                                            <p>Excellent Product. Item exactly has advertised.</p>
+                                            <p style="color:#1d3361;">Excellent Product. Item exactly has advertised.</p>
                                         </div>
                                     </div>
                                 </div>

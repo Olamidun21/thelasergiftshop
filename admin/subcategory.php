@@ -132,51 +132,57 @@ if(isset($_SESSION['admin_id'])){
                                 </div>
                                   
                         </div>
-                        <div class="card">
-                                                <div class="card-header">
-                                                <h5>Subcategory Lists</h5>
-                                                </div>
-                                                <div class="card-body"> 
-                                                    <div class="col-md-12  order-datatable">
-                                                        <table class="display" id="basic-1">
-                                                            <thead>
-                                                            <tr class="table-head">
-                                                                <th scope="col">Subcategory id</th>
-                                                                <th scope="col">Name</th>
-                                                                <th scope="col">Image</th>
-                                                                <th scope="col">Category</th>
-                                                            </tr>
-                                                            </thead>
-                                                                <?php foreach ($subcats as $subcat){ ?>
-                                                            <tbody>
-                                                            <tr>
-                                                                <td><?php echo $subcat['sub_cat_id'] ?></td>
-                                                            
-                                                                <td> <?php echo $subcat['name'];?>
-                                                                </td>
-                                                                <td>
-                                                                    <a href="#"><img src="../assets/images/products/<?php echo $subcat['image'];?>" alt="subcategory" class="img-thumbnail mx-auto d-block" style="width:100px; height:100px;"></a>
-                                                                </td>
-                                                                <td><?php echo $subcat['category']; ?></td>
-                                                                <!-- <td>
-                                                                    <a href="edit?id=<?php echo $subcat['sub_cat_id']?>" class="icon"><i class="fa fa-pencil"></i></a>
-                                                                    <a href="delete?id=<?php echo $subcat['sub_cat_id']?>" class="icon"><i class="fa fa-trash"></i></a>
-                                                            </td> -->
-                                                            </tr>
-                                                            
-                                                            </tbody>
-                                                            <?php } ?>
-                                                            
-                                                            
-                                                        </table>
-                                                </div>
-                                            </div>
+                       
                     </div>
                 </div>
-               
+                <div class="row">
+                    <div class = "col-md-12">
+                        <div class="card">
+                                                        <div class="card-header">
+                                                        <h5>Subcategory Lists</h5>
+                                                        </div>
+                                                        <div class="card-body"> 
+                                                            <div class="col-md-12 cart-table">
+                                                                <table class="display" id="basic-1">
+                                                                    <thead>
+                                                                    <tr class="table-head">
+                                                                        <th scope="col">Subcategory id</th>
+                                                                        <th scope="col">Name</th>
+                                                                        <th scope="col">Image</th>
+                                                                        <th scope="col">Category</th>
+                                                                    </tr>
+                                                                    </thead>
+                                                                        <?php foreach ($subcats as $subcat){ ?>
+                                                                    <tbody>
+                                                                    <tr>
+                                                                        <td><?php echo $subcat['sub_cat_id'] ?></td>
+                                                                    
+                                                                        <td> <?php echo $subcat['name'];?>
+                                                                        </td>
+                                                                        <td>
+                                                                            <a href="#"><img src="../assets/images/products/<?php echo $subcat['image'];?>" alt="subcategory" class="img-thumbnail mx-auto d-block" style="width:100px; height:100px;"></a>
+                                                                        </td>
+                                                                        <td><?php echo $subcat['category']; ?></td>
+                                                                        <!-- <td>
+                                                                            <a href="edit?id=<?php echo $subcat['sub_cat_id']?>" class="icon"><i class="fa fa-pencil"></i></a>
+                                                                            <a href="delete?id=<?php echo $subcat['sub_cat_id']?>" class="icon"><i class="fa fa-trash"></i></a>
+                                                                    </td> -->
+                                                                    </tr>
+                                                                    
+                                                                    </tbody>
+                                                                    <?php } ?>
+                                                                    
+                                                                    
+                                                                </table>
+                                                            </div>
+                                                        </div>
+                                </div>
+                        </div>
+                    </div>
+                </div>    
             <!-- Container-fluid Ends-->
 
-        </div>
+            </div>
 
         <!-- footer start-->
         <footer class="footer">

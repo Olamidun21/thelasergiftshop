@@ -658,7 +658,7 @@
         public function getProductsize($scp_id){
             $data = array();
             $color = array();
-            $query = "select * from products join product_sizes using(product_id) join sizes using(size_id) where products.name = '$scp_id'";
+            $query = "select * from products join product_sizes using(product_id) join sizes using(size_id) where products.slug = '$scp_id'";
             $stmt = $this->read2($query);
             while($row = $stmt->fetch_assoc()){
               
@@ -669,7 +669,7 @@
         public function getProductmaterial($scp_id){
             $data = array();
             $color = array();
-            $query = "select * from products join product_materials using(product_id) join materials using(material_id) where products.name = '$scp_id'";
+            $query = "select * from products join product_materials using(product_id) join materials using(material_id) where products.slug = '$scp_id'";
             $stmt = $this->read2($query);
             while($row = $stmt->fetch_assoc()){
               
@@ -680,7 +680,7 @@
         public function getProductcolor($scp_id){
             $data = array();
             $color = array();
-            $query = "select * from products join product_colors using(product_id) join colors using(color_id) where products.name = '$scp_id'";
+            $query = "select * from products join product_colors using(product_id) join colors using(color_id) where products.slug = '$scp_id'";
             $stmt = $this->read2($query);
             while($row = $stmt->fetch_assoc()){
               
@@ -691,7 +691,7 @@
         public function getProductshape($scp_id){
             $data = array();
             $color = array();
-            $query = "select * from products join product_shapes using(product_id) join shapes using(shape_id) where products.name = '$scp_id'";
+            $query = "select * from products join product_shapes using(product_id) join shapes using(shape_id) where products.slug = '$scp_id'";
             $stmt = $this->read2($query);
             while($row = $stmt->fetch_assoc()){
               
@@ -702,7 +702,7 @@
         public function getProductfont($scp_id){
             $data = array();
             $color = array();
-            $query = "select * from products join product_fonts using(product_id) join fonts using(font_id) where products.name = '$scp_id'";
+            $query = "select * from products join product_fonts using(product_id) join fonts using(font_id) where products.slug = '$scp_id'";
             $stmt = $this->read2($query);
             while($row = $stmt->fetch_assoc()){
               
@@ -713,7 +713,7 @@
         public function getProductImages($scp_id){
             $data = array();
             $color = array();
-            $query = "select * from products join product_image using(product_id) where products.name = '$scp_id'";
+            $query = "select * from products join product_image using(product_id) where products.slug = '$scp_id'";
             $stmt = $this->read2($query);
             while($row = $stmt->fetch_assoc()){
               
@@ -724,7 +724,7 @@
         public function getProductHole($scp_id){
             $data = array();
             $color = array();
-            $query = "select * from products join product_holes using(product_id) join holes using(hole_id)  where products.name = '$scp_id'";
+            $query = "select * from products join product_holes using(product_id) join holes using(hole_id)  where products.slug = '$scp_id'";
             $stmt = $this->read2($query);
             while($row = $stmt->fetch_assoc()){
               
@@ -735,24 +735,22 @@
         public function search($searchs){
             $data = array();
             $search = $searchs['search'];
-            $cat = $searchs['cate'];
-            if($cat > 0){
-            $query = "SELECT * FROM sub_cate_products JOIN products using(product_id) join sub_categories using(sub_cat_id) join categories using(cat_id) where categories.name = '$cat' and products.name like '%$search%'";
-            $stmt = $this->read2($query);
-            while($row = $stmt->fetch_assoc()){
+            // $cat = $searchs['cate'];
+            // if($cat > 0){
+            // $query = "SELECT * FROM sub_cate_products JOIN products using(product_id) join sub_categories using(sub_cat_id) join categories using(cat_id) where categories.name = '$cat' and products.name like '%$search%'";
+            // $stmt = $this->read2($query);
+            // while($row = $stmt->fetch_assoc()){
               
-                $data[] = $row;
-            }
-            }else {
+            //     $data[] = $row;
+            // }
+            // }else {
                 $query = "SELECT * FROM sub_cate_products JOIN products using(product_id) where name like '%$search%'";
-            $stmt = $this->read2($query);
+                $stmt = $this->read2($query);
             while($row = $stmt->fetch_assoc()){
               
                 $data[] = $row;
             }
-            }
-
-            return $data;
+            return $data; 
 
         }
         public function addtoinvoice($data){

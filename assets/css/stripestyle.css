@@ -22,7 +22,7 @@
     background-color: #FFF;
     width: 100%;
     margin-top: 5px;
-    box-sizing:border-box;
+    box-sizing: border-box;
 }
 
 .demoSelectBox {
@@ -65,7 +65,7 @@ select.demoSelectBox {
     color: #FFF;
     border: #5263cc 1px solid;
     border-radius: 4px;
-    cursor:pointer;
+    cursor: pointer;
 }
 
 .btnAction:focus {
@@ -108,13 +108,13 @@ select.demoSelectBox {
 }
 
 .display-none {
-    display:none;
+    display: none;
 }
 
 #response-container {
     padding: 40px 20px;
     width: 270px;
-    text-align:center;
+    text-align: center;
 }
 
 

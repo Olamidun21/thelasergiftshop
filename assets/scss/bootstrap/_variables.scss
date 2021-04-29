@@ -37,13 +37,15 @@ $grays: map-merge((
 $blue:    #007bff !default;
 $indigo:  #6610f2 !default;
 $purple:  #6f42c1 !default;
-$pink:    #e83e8c !default;
+// $pink:    #e83e8c !default;
 $red:     #dc3545 !default;
 $orange:  #fd7e14 !default;
 $yellow:  #ffc107 !default;
 $green:   #28a745 !default;
 $teal:    #20c997 !default;
 $cyan:    #17a2b8 !default;
+$pink:    #ff76af !default;
+$navy:    #1d3361 !default;
 
 $colors: () !default;
 $colors: map-merge((
@@ -58,12 +60,13 @@ $colors: map-merge((
   "teal":       $teal,
   "cyan":       $cyan,
   "white":      $white,
+  "navy":       $navy,
   "gray":       $gray-600,
   "gray-dark":  $gray-800
 ), $colors);
 
-$primary:       $blue !default;
-$secondary:     $gray-600 !default;
+$primary:       $navy !default;
+$secondary:     $pink !default;
 $success:       $green !default;
 $info:          $cyan !default;
 $warning:       $yellow !default;
@@ -100,7 +103,7 @@ $yiq-text-light:            $white !default;
 
 $enable-caret:              true !default;
 $enable-rounded:            true !default;
-$enable-shadows:            false !default;
+$enable-shadows:            true !default;
 $enable-gradients:          false !default;
 $enable-transitions:        true !default;
 $enable-hover-media-query:  false !default; // Deprecated, no longer affects any compiled CSS
@@ -142,13 +145,13 @@ $sizes: map-merge((
 // Settings for the `<body>` element.
 
 $body-bg:                   $white !default;
-$body-color:                $gray-900 !default;
+$body-color:                $black !default;
 
 // Links
 //
 // Style anchor elements.
 
-$link-color:                theme-color("primary") !default;
+$link-color:                theme-color("secondary") !default;
 $link-decoration:           none !default;
 $link-hover-color:          darken($link-color, 15%) !default;
 $link-hover-decoration:     underline !default;
@@ -276,9 +279,9 @@ $lead-font-weight:            300 !default;
 
 $small-font-size:             80% !default;
 
-$text-muted:                  $gray-600 !default;
+$text-muted:                  $black !default;
 
-$blockquote-small-color:      $gray-600 !default;
+$blockquote-small-color:      $black !default;
 $blockquote-font-size:        ($font-size-base * 1.25) !default;
 
 $hr-border-color:             rgba($black, .1) !default;
@@ -599,7 +602,7 @@ $zindex-tooltip:                    1070 !default;
 
 $nav-link-padding-y:                .5rem !default;
 $nav-link-padding-x:                1rem !default;
-$nav-link-disabled-color:           $gray-600 !default;
+$nav-link-disabled-color:           $black !default;
 
 $nav-tabs-border-color:             $gray-300 !default;
 $nav-tabs-border-width:             $border-width !default;
@@ -861,7 +864,7 @@ $thumbnail-box-shadow:              0 1px 2px rgba($black, .075) !default;
 // Figures
 
 $figure-caption-font-size:          90% !default;
-$figure-caption-color:              $gray-600 !default;
+$figure-caption-color:              $black !default;
 
 
 // Breadcrumbs
@@ -925,5 +928,5 @@ $pre-scrollabel-max-height:         340px !default;
 
 
 // Printing
-$print-page-size:                   a3 !default;
+$print-page-size:                   a4 !default;
 $print-body-min-width:              map-get($grid-breakpoints, "lg") !default;

@@ -51,7 +51,7 @@ if(isset($_SESSION['admin_id'])){
                     <li><a class="sidebar-header" href=""><i data-feather="user-plus"></i><span>Users</span><i class="fa fa-angle-right pull-right"></i></a>
                         <ul class="sidebar-submenu">
                             <li><a href="user-list"><i class="fa fa-circle"></i>User List</a></li>
-                            <li><a href="create-user><i class="fa fa-circle"></i>Create User</a></li>
+                            <li><a href="create-user"><i class="fa fa-circle"></i>Create User</a></li>
                         </ul>
                     </li>
                     
@@ -61,9 +61,9 @@ if(isset($_SESSION['admin_id'])){
                             <li><a href="profile"><i class="fa fa-circle"></i>Profile</a></li>
                         </ul>
                     </li>
-                <li><a class="sidebar-header" href="invoice"><i data-feather="archive"></i><span>Invoice</span></a>
+                    <li><a class="sidebar-header" href="invoice"><i data-feather="archive"></i><span>Invoice</span></a>
                     </li>
-                    <li><a class="sidebar-header" href="/"><i data-feather="log-in"></i><span>Login</span></a>
+                    <li><a class="sidebar-header" href="../admin"><i data-feather="log-in"></i><span>Login</span></a>
                     </li>
                 </ul>
             </div>
