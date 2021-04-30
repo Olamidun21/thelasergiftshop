@@ -70,14 +70,14 @@
 <!-- breadcrumb End -->
 
 <!--section start-->
-<section class="login-page section-big-py-space bg-light">
+<section class="login-page section-big-py-space bg-white">
     <div class="custom-container">
         <div class="row">
-            <div class="col-xl-4 col-lg-6 col-md-8 offset-xl-4 offset-lg-3 offset-md-2">
+            <div class="col-xl-4 col-lg-6 col-md-8 offset-xl-4 offset-lg-3 offset-md-2 shadow-sm">
                 <div class="theme-card">
                     <h3 class="text-center">Login</h3>
                     <span id="msg" style="color:red;"></span>
-                    <form class="theme-form">
+                    <form class="theme-form bg-white">
                         <div class="form-group">
                             <label for="email">Email</label>
                             <input type="text" class="form-control" id="email" placeholder="Email" required="">

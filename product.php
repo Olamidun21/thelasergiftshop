@@ -206,6 +206,9 @@ if(!isset($_SESSION)){
 /*    src: url(assets/fonts/);*/
 /*    font-weight: bold;*/
 /*}*/
+body{
+    background-color:white !important;
+}
 
     </style>
 </head>
@@ -411,7 +414,7 @@ if(!isset($_SESSION)){
 <section class="tab-product  tab-exes">
     <div class="custom-container">
         <div class="row">
-            <div class="col-sm-12 col-lg-12">
+            <div class="col-sm-12 col-lg-12 shadow mb-4">
                <div class="creative-card creative-inner">
                    <ul class="nav nav-tabs nav-material" id="top-tab" role="tablist">
                        <li class="nav-item"><a class="nav-link active" id="top-home-tab" data-toggle="tab" href="#top-home" role="tab" aria-selected="true">Description</a>

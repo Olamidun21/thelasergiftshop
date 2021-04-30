@@ -96,7 +96,7 @@ body{
                     <div>
                         <h2><?php echo $category[0]['name']  ?></h2>
                         <ul>
-                            <li><a href="/">home</a></li>
+                            <li><a href="/thelasergiftshop/">home</a></li>
                             <li><i class="fa fa-angle-double-right"></i></li>
                             <li><a href="category?id=<?php echo $category[0]['cat_id'] ?>"><?php echo $category[0]['name']  ?></a></li>
                         </ul>

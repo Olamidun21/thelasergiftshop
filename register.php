@@ -31,7 +31,7 @@
     <!-- Theme css -->
     <link rel="stylesheet" type="text/css" href="../assets/css/color2.css" media="screen" id="color">
 </head>
-<body>
+<body class="bg-white">
 
 <!-- loader start -->
 <div class="loader-wrapper">
@@ -67,13 +67,13 @@
 <!-- breadcrumb End -->
 
 <!--section start-->
-<section class="login-page section-big-py-space bg-light">
+<section class="login-page section-big-py-space">
     <div class="custom-container">
         <div class="row">
-            <div class="col-lg-4 offset-lg-4">
-                <div class="theme-card">
+            <div class="col-lg-4 offset-lg-4 shadow-sm ">
+                <div class="theme-card ">
                     <h3 class="text-center">Create account</h3>
-                    <form class="theme-form" id="register" method="post">
+                    <form class="theme-form bg-white" id="register" method="post">
                         <div class="form-row">
                             <div class="col-md-12 form-group">
                                 <label for="email">First Name</label>

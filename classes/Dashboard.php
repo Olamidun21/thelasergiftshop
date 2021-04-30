@@ -501,15 +501,70 @@
         }
 
         }
+       public function group_by($key, $data) {
+            $result = array();
+        
+            foreach($data as $val) {
+                if(array_key_exists($key, $val)){
+                    $result [$val[$key]][] = $val;
+                }else{
+                    $result[""][] = $val;
+                }
+            }
+        
+            return $result;
+        }
         public function getCategories(){
             $data = array();
-            $query = "SELECT * FROM categories WHERE status = 'active'";
+            $query = "SELECT categories.*, 
+            sub_categories.name AS subcat_name,sub_categories.image AS subimage,
+            sub_categories.status AS subStatus, sub_categories.sub_cat_id AS sub_cat_id
+            FROM  sub_categories left join categories using(cat_id)  WHERE categories.status = 'active'";
             $stmt = $this->read2($query);
             while($row = $stmt->fetch_assoc()){
                 $data[] = $row;
             }
             return $data;
+            // $result = $data;
+
+            // foreach($data as $val) {
+            //     if(array_key_exists($key, $val)){
+            //         $result[$val[$key]][] = $val;
+            //     }else{
+            //         $result[""][] = $val;
+            //     }
+            // }
+        
+            // return $result;
+        //     $users = $data;
+        //      $groups =  $users->reduce(function ($groups, $param) {
+        //      $data = $param->name;
+        //      if (! $groups[$data]) {
+        //        $groups[$data] = [];
+        //      }
+        //      $groups[$data].push($param);
+        //      return $groups;
+        //    }, []);
+        //     $groupArrays = Object.keys($groups).map(($data) => {
+        //      return {
+        //        $data,
+        //        $games: $groups[$data]
+        //      };
+     
+        //    });
+        //      return $groupArrays
+            // return $data;
         }
+
+
+        // public function getCategories(){
+        //     $data = array();
+        //     $query = "SELECT * FROM categories WHERE categories.status = 'active'";
+        //     $stmt = $this->read2($query);
+        //     while($row = $stmt->fetch_assoc()){
+        //         $data[] = $row;
+        //     }
+        // }
         public function getCategory($cate){
             $data = array();
             $query = "SELECT * FROM categories WHERE cat_id ='$cate' and status = 'active'";

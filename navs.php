@@ -8,7 +8,8 @@ $ip = $_SERVER['REMOTE_ADDR'];
     $featured = $obj->getFeatured();
     $categories = $obj->getCategories();
     $subcat = $obj->getSubcategories();
-    $cart = $obj->getCart($ip);
+    $byGroup = $obj->group_by("name", $categories);
+    // $byGroup = group_by("name", $categories);
 ?>
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
@@ -302,36 +303,116 @@ a {
         </div>
         <!-- <div class="category-header category-header-inverse"> -->
             <div class="custom-container navmenu">
-                <div class="row">
-                    <div class="col">
-                        <div class="navbar-menu">
-                            <!-- <div class="category-left"> -->
-                                <div class=" nav-block">
-                                    <div class="nav-left">
-                                        <nav class="navbar row d-flex justify-content-between">
-                                            <!-- <h5 class="mb-0 ml-3 text-white title-font">Shop by category</h5> -->
-                                            <ul class="nav-cat title-font m-0" id="cat">
-                                            <?php
-                                                foreach($categories as $c){
+    <div class="row">
+        <div class="col">
+            <div class="navbar-menu">
+                <!-- <div class="category-left"> -->
+                    <div class=" nav-block">
+                        <div class="nav-left">
+                            <nav class="navbar row d-flex justify-content-between">
+                                <!-- <h5 class="mb-0 ml-3 text-white title-font">Shop by category</h5> -->
+                                <ul class="nav-cat title-font m-0" id="cat">
+                                    
 
-                                            ?>
-                                                    <li class="m-1 ml-3 "><a href="category?id=<?php  echo $c['cat_id'] ?>" class ="m-2"><img src="assets/images/category/<?php echo $c["image"]; ?>" alt="category-banner" style="height:30px; width:30px;" class="rounded-circle mr-1"><?php echo $c["name"]; ?></a></li>
-                                               <?php
-                                                }
-                                            ?>
-                                            </ul>
-                                        </nav>
-                                       
+
+
+
+
+
+
+
+
+
+
+
+
+
+            <div class="menu-block">
+                <nav id="main-nav">
+                  <div class="toggle-nav"><i class="fa fa-bars sidebar-bar"></i></div>
+                 <ul id="main-menu" class="sm pixelstrap sm-horizontal">
+                    <li>
+                      <div class="mobile-back text-right">Back<i class="fa fa-angle-right pl-2" aria-hidden="true"></i></div>
+                    </li>
+                    <!--product-meu start-->
+                   
+                    <?php
+                                // echo json_encode($byGroup)
+                                // echo "<pre>" . var_export($byGroup, true) . "</pre>"
+                             
+                                ?> 
+                    
+                    <?php
+                            foreach($byGroup as $c){
+                                
+                                ?>
+                                    <!-- <a href="category?id=<?php  echo $c['cat_id'] ?>" class ="m-2"></a> -->
+                                <li class="mega">
+                            <a href=""  class="dark-menu-item">
+                                    <img src="assets/images/category/<?php echo $c[0]["image"]; ?>" alt="category-banner" style="height:30px; width:30px;" class="rounded-circle">
+                                    <?php echo $c[0]["name"]; ?>
+                            <ul class="mega-menu full-mega-menu ">
+                                <li>
+                                <div class="container">
+                                    <div class="row">
+                                    <div class="col" >
+                                        <div class="link-section">
+                                            <div class="menu-content ">
+                                            <div class="row">
+                                            <?php
+                                                    foreach($c as $sc){
+                                                ?>
+                                                    <p class="mr-5 mb-4"><a href="subcategory?id=<?php  echo $sc['sub_cat_id'] ?>"><?php echo $sc['subcat_name'] ?>
+                                                        </a></p>
+                                                    <?php } ?>
+                                            </div>
+                                        
+                                           <!-- <div class="menu-title">
+                                            <h5>sidebar</h5>
+                                           </div> -->
+                                          </div>
+                                        </div>
                                     </div>
+                                    
                                 </div>
-                               
-                            <!-- </div> -->
-                           
+                                </li>
+                            </ul>
+                        </a>
+                    </li>
+                        <?php
+                        }
+                    ?>
+                       
+                    <!--product-meu end-->
+                  </ul>
+                </nav>
+              </div>      
+                                    </ul>
+                                </nav>
+                                
+                            </div>
+                        </div>
+                        
+                    <!-- </div> -->
+                    
                         </div>
                     </div>
                 </div>
             </div>
         <!-- </div> -->
+
+
+
+
+
+
+
+
+
+
+
+
+
     </header>
                     <div class="collection-content col shadow" id="searchResult">
                             <div class="page-main-content">
@@ -359,7 +440,7 @@ a {
         <div class="cart_top">
             <h3>my cart</h3>
             <div class="close-cart">
-                <a href="javascript:void(0)" onclick="closeCart()">
+                <a href="javascript:void(0)" onclick="closeCartss()">
                     <i class="fa fa-times" aria-hidden="true"></i>
                 </a>
             </div>
@@ -533,7 +614,15 @@ a {
              }
          })
 
-     })       
+     })    
+     function getdetails (id){
+        //  location.assign("/thelasergiftshop/category?id=" + id)
+        // <a href="category?id=<?php  echo $c['cat_id'] ?>" class ="m-2"></a>
+      
+     }   
+     function groupRes(categories){
+       
+     }
     function addTocart(){
         customtext = $('#custom').val();
         font = $('#font').val();
